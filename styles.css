@@ -360,8 +360,31 @@ h1, h2, h3, p { margin: 0; }
   z-index: 3;
 }
 
-.mask--top { top: 0; left: 0; right: 0; height: 14%; min-height: 44px; }
+.mask--top {
+  top: 0;
+  left: 0;
+  /* Stops short of the right edge so the volume, subtitle and quality
+     controls stay visible. The title is left-aligned, so this is enough. */
+  width: 74%;
+  height: 11%;
+  min-height: 36px;
+}
 
-.mask--corner { right: 0; bottom: 0; width: 36%; height: 17%; min-height: 46px; }
+.mask--corner { right: 0; bottom: 0; width: 30%; height: 14%; min-height: 40px; }
+
+/* Fullscreen applies to the whole box, so the masks scale with the picture. */
+.frame:fullscreen,
+.frame:-webkit-full-screen {
+  aspect-ratio: auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
 
 .frame[data-veiled="paused"] .mask { display: none; }
+
+.stage-controls {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 0.6rem;
+}

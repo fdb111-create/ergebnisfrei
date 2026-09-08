@@ -14,6 +14,10 @@ const VEIL_ON_PAUSE = true;
 // just cannot see them. They do not apply in fullscreen.
 const MASK_PLAYER_CHROME = true;
 
+// The corner mask only exists to cover an advert's skip preview, so it lifts
+// once adverts are done and gives you the corner of the picture back.
+const CORNER_MASK_MS = 45000;
+
 // Built-in copy of the demo matches, used only when the page is opened straight
 // from your desktop. Safe to delete once the site is live.
 const OFFLINE_DEMO = {
@@ -225,6 +229,7 @@ async function openPlayer(stage, match) {
     const corner = document.createElement('div');
     corner.className = 'mask mask--corner';
     frame.append(top, corner);
+    setTimeout(() => corner.remove(), CORNER_MASK_MS);
   }
 
   const after = document.createElement('div');
@@ -238,7 +243,22 @@ async function openPlayer(stage, match) {
   after.append(done);
   if (match.hasScore || match.id.startsWith('DEMO')) after.append(revealBtn);
 
-  stage.append(frame, after);
+  const controls = document.createElement('div');
+  controls.className = 'stage-controls';
+  const fsBtn = document.createElement('button');
+  fsBtn.className = 'btn btn--quiet';
+  fsBtn.type = 'button';
+  fsBtn.textContent = 'Fullscreen';
+  controls.append(fsBtn);
+
+  fsBtn.addEventListener('click', () => {
+    // Fullscreen the whole box, not the iframe, so the masks come too.
+    const go = frame.requestFullscreen || frame.webkitRequestFullscreen;
+    if (go) go.call(frame);
+    else fsBtn.textContent = 'Fullscreen not supported here';
+  });
+
+  stage.append(frame, controls, after);
 
   revealBtn.addEventListener('click', async () => {
     revealBtn.replaceWith(await revealEl(match));
@@ -263,6 +283,9 @@ async function openPlayer(stage, match) {
       rel: 0,
       iv_load_policy: 3,
       cc_load_policy: 0,
+      // YouTube's own fullscreen button would show the bare iframe and leave
+      // the masks behind, so it is turned off in favour of the button below.
+      fs: 0,
       origin: location.origin
     },
     events: {

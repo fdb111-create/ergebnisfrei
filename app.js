@@ -339,17 +339,7 @@ async function openPlayer(stage, match) {
       origin: location.origin
     },
     events: {
-      onReady: (e) => {
-        try { e.target.playVideo(); } catch {}
-        // Polling rather than waiting on events: the PLAYING event is not
-        // dependable when an advert loads first, which used to leave the cover
-        // stuck up with no way past it.
-        ticker = setInterval(tick, 250);
-        stage.teardown = () => {
-          clearInterval(ticker);
-          try { player.destroy(); } catch {}
-        };
-      },
+      onReady: (e) => { try { e.target.playVideo(); } catch {} },
       onError: () => {
         clearInterval(ticker);
         frame.replaceChildren(errorEl());
@@ -357,22 +347,42 @@ async function openPlayer(stage, match) {
     }
   });
 
+  // Started here rather than inside onReady. That event does not always
+  // arrive, and when it did not, the cover stayed up over a thumbnail with no
+  // way past it. Polling asks the player directly instead of waiting to be told.
+  ticker = setInterval(tick, 250);
+  stage.teardown = () => {
+    clearInterval(ticker);
+    try { player.destroy(); } catch {}
+  };
+
+  // Last resort: if nothing has moved after eight seconds, say so rather than
+  // sitting on a dead panel.
+  setTimeout(() => {
+    if (!started) veilText.textContent = 'This one will not start. Close it and try another, or reload the page.';
+  }, 8000);
+
   function tick() {
     let state = -1;
     let duration = 0;
     let at = 0;
     try {
+      if (typeof player.getPlayerState !== 'function') return;
       state = player.getPlayerState();
       duration = player.getDuration();
       at = player.getCurrentTime();
     } catch { return; }
+
+    // The clock moving is the one dependable sign that something is running,
+    // whatever state the player claims to be in.
+    const moving = at > 0.2;
 
     // An advert reports its own length rather than the match's. This also
     // catches mid-rolls, so the corner patch comes back for those.
     const onAd = duration > 0 && Math.abs(duration - match.duration) > 2;
     frame.dataset.ad = onAd ? 'true' : 'false';
 
-    if (state === YT.PlayerState.PLAYING) {
+    if (state === YT.PlayerState.PLAYING || moving) {
       if (!started) {
         started = true;
         try { player.unMute(); player.setVolume(100); } catch {}

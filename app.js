@@ -234,12 +234,15 @@ async function openPlayer(stage, match) {
     const top = document.createElement('div');
     top.className = 'mask mask--top';
     frame.append(top);
-    // Only shown while an advert runs — see tick(). Labelled so you can find
-    // YouTube's skip button without seeing the thumbnail behind it.
-    const corner = document.createElement('div');
-    corner.className = 'mask mask--corner';
-    corner.textContent = 'Skip here';
-    frame.append(corner);
+    // Only shown while an advert runs — see tick(). Full width rather than a
+    // corner: the skip widget moves around with the window size and aspect
+    // ratio, and a strip along the whole bottom edge cannot miss it.
+    const bottom = document.createElement('div');
+    bottom.className = 'mask mask--bottom';
+    const hint = document.createElement('span');
+    hint.textContent = 'Skip here';
+    bottom.append(hint);
+    frame.append(bottom);
   }
 
   function veilAs(mode) {

@@ -395,14 +395,16 @@ h1, h2, h3, p { margin: 0; }
   min-height: 36px;
 }
 
-.mask--corner {
+.mask--bottom {
+  left: 0;
   right: 0;
   bottom: 0;
-  width: 34%;
-  height: 17%;
-  min-height: 48px;
+  height: 20%;
+  min-height: 56px;
   display: none;
-  place-items: center;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 4%;
   color: var(--dim);
   font-size: 0.72rem;
   font-weight: 700;
@@ -411,7 +413,7 @@ h1, h2, h3, p { margin: 0; }
 }
 
 /* Present only while an advert is running. */
-.frame[data-ad="true"] .mask--corner { display: grid; }
+.frame[data-ad="true"] .mask--bottom { display: flex; }
 
 /* Fullscreen applies to the whole box, so the masks scale with the picture. */
 .frame:fullscreen,

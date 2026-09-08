@@ -213,13 +213,21 @@ async function openPlayer(stage, match) {
 
   function veilAs(mode) {
     frame.dataset.veiled = mode;
-    veilText.textContent = 'Paused. YouTube fills a paused video with other matches and their scores, so the picture is hidden until you carry on.';
+    resume.hidden = mode === 'ad';
+    if (mode === 'cover') {
+      // Until playback is confirmed, YouTube shows the video's own thumbnail,
+      // which is a scoreboard. Nothing of the player may be visible yet.
+      veilText.textContent = 'Ready when you are.';
+      resume.textContent = 'Play';
+    } else if (mode === 'ad') {
+      veilText.textContent = 'Advert playing. Its skip button previews the match thumbnail, so the picture stays covered. Click the bottom right corner to skip — the button is there, just out of sight.';
+    } else {
+      veilText.textContent = 'Paused. YouTube fills a paused video with other matches and their scores, so the picture stays covered until you carry on.';
+      resume.textContent = 'Resume';
+    }
   }
 
-  // The player must stay visible from the outset: Safari refuses to autoplay a
-  // video it cannot see, so hiding it at the start stops playback entirely.
-  // The mask over the title strip does that job instead.
-  frame.dataset.veiled = 'false';
+  veilAs('cover');
 
   frame.append(holder, veil);
 
@@ -296,10 +304,20 @@ async function openPlayer(stage, match) {
       },
       onStateChange: (e) => {
         if (e.data === YT.PlayerState.PLAYING) {
-          frame.dataset.veiled = 'false';
+          if (frame.dataset.veiled !== 'ad') frame.dataset.veiled = 'false';
           clearInterval(watcher);
-          // Pull the player before YouTube's end screen of scored thumbnails.
           watcher = setInterval(() => {
+            // An advert reports its own length, not the match's. That is how we
+            // know one is running, and the whole picture stays covered until it
+            // is over — the skip button carries the match thumbnail.
+            let duration = 0;
+            try { duration = player.getDuration(); } catch {}
+            const onAd = duration > 0 && Math.abs(duration - match.duration) > 2;
+
+            if (onAd) { if (frame.dataset.veiled !== 'ad') veilAs('ad'); return; }
+            if (frame.dataset.veiled === 'ad') frame.dataset.veiled = 'false';
+
+            // Pull the player before YouTube's end screen of scored thumbnails.
             if (player.getCurrentTime() >= match.cutAt) {
               clearInterval(watcher);
               player.destroy();
@@ -321,9 +339,11 @@ async function openPlayer(stage, match) {
     }
   });
 
+  // Clicking here is a real tap on our own page, which is what Safari wants
+  // before it will start an unmuted video. The cover lifts only once playback
+  // is actually running, never on the click alone.
   resume.addEventListener('click', () => {
-    frame.dataset.veiled = 'false';
-    player.playVideo();
+    try { player.playVideo(); } catch {}
   });
 }
 

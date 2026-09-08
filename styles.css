@@ -255,17 +255,28 @@ h1, h2, h3, p { margin: 0; }
 }
 
 /* The player itself is hidden, not covered, while paused. See app.js. */
-.frame[data-veiled="paused"] .holder { visibility: hidden; }
+
 
 .veil {
   display: none;
+  position: absolute;
+  inset: 0;
+  z-index: 4;
   place-items: center;
+  align-content: center;
+  gap: 1rem;
   background: var(--panel);
   text-align: center;
   padding: 1.5rem;
 }
 
-.frame[data-veiled="paused"] .veil { display: grid; }
+.frame[data-veiled="cover"] .veil,
+.frame[data-veiled="paused"] .veil,
+.frame[data-veiled="ad"] .veil { display: grid; }
+
+/* The advert cover lets clicks through, so the skip button still works even
+   though you cannot see it. */
+.frame[data-veiled="ad"] .veil { pointer-events: none; }
 
 .veil p { color: var(--dim); max-width: 30ch; margin-bottom: 1rem; }
 
@@ -381,7 +392,9 @@ h1, h2, h3, p { margin: 0; }
   border-radius: 0;
 }
 
-.frame[data-veiled="paused"] .mask { display: none; }
+.frame[data-veiled="cover"] .mask,
+.frame[data-veiled="paused"] .mask,
+.frame[data-veiled="ad"] .mask { display: none; }
 
 .stage-controls {
   display: flex;

@@ -255,7 +255,8 @@ h1, h2, h3, p { margin: 0; }
 }
 
 /* The player itself is hidden, not covered, while paused. See app.js. */
-.frame[data-veiled="true"] .holder { visibility: hidden; }
+.frame[data-veiled="starting"] .holder,
+.frame[data-veiled="paused"] .holder { visibility: hidden; }
 
 .veil {
   display: none;
@@ -265,7 +266,8 @@ h1, h2, h3, p { margin: 0; }
   padding: 1.5rem;
 }
 
-.frame[data-veiled="true"] .veil { display: grid; }
+.frame[data-veiled="starting"] .veil,
+.frame[data-veiled="paused"] .veil { display: grid; }
 
 .veil p { color: var(--dim); max-width: 30ch; margin-bottom: 1rem; }
 
@@ -350,3 +352,19 @@ h1, h2, h3, p { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; transition: none !important; }
 }
+
+/* Masks over the YouTube player. Only present when MASK_PLAYER_CHROME is on in
+   app.js. They let clicks through, so controls still work underneath. */
+.mask {
+  position: absolute;
+  background: #000;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.mask--top { top: 0; left: 0; right: 0; height: 14%; min-height: 44px; }
+
+.mask--corner { right: 0; bottom: 0; width: 36%; height: 17%; min-height: 46px; }
+
+.frame[data-veiled="starting"] .mask,
+.frame[data-veiled="paused"] .mask { display: none; }

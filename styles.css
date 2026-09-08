@@ -255,7 +255,6 @@ h1, h2, h3, p { margin: 0; }
 }
 
 /* The player itself is hidden, not covered, while paused. See app.js. */
-.frame[data-veiled="starting"] .holder,
 .frame[data-veiled="paused"] .holder { visibility: hidden; }
 
 .veil {
@@ -266,7 +265,6 @@ h1, h2, h3, p { margin: 0; }
   padding: 1.5rem;
 }
 
-.frame[data-veiled="starting"] .veil,
 .frame[data-veiled="paused"] .veil { display: grid; }
 
 .veil p { color: var(--dim); max-width: 30ch; margin-bottom: 1rem; }
@@ -366,5 +364,4 @@ h1, h2, h3, p { margin: 0; }
 
 .mask--corner { right: 0; bottom: 0; width: 36%; height: 17%; min-height: 46px; }
 
-.frame[data-veiled="starting"] .mask,
 .frame[data-veiled="paused"] .mask { display: none; }

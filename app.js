@@ -7,12 +7,6 @@
 // you would rather not hide any part of the player at all — see README.
 const VEIL_ON_PAUSE = true;
 
-// YouTube's own title bar sits inside the player and shows for a couple of
-// seconds when a video starts. Covering it would break YouTube's rules, so
-// instead the player stays hidden until its chrome has faded, then rewinds to
-// the start. Raise this if a title still slips through on a slow connection.
-const CHROME_FADE_MS = 3400;
-
 // Covers YouTube's title strip and the bottom-right corner where an advert's
 // skip button previews the match thumbnail. This BREAKS YouTube's terms, which
 // forbid putting anything in front of the player. Set to false to stay clean.
@@ -215,16 +209,13 @@ async function openPlayer(stage, match) {
 
   function veilAs(mode) {
     frame.dataset.veiled = mode;
-    if (mode === 'starting') {
-      veilText.textContent = 'Starting. If YouTube plays an advert first, look away until it ends \u2014 its skip button previews the match thumbnail, and that carries the score.';
-      resume.hidden = true;
-    } else if (mode === 'paused') {
-      veilText.textContent = 'Paused. YouTube fills a paused video with other matches and their scores, so the picture is hidden until you carry on.';
-      resume.hidden = false;
-    }
+    veilText.textContent = 'Paused. YouTube fills a paused video with other matches and their scores, so the picture is hidden until you carry on.';
   }
 
-  veilAs('starting');
+  // The player must stay visible from the outset: Safari refuses to autoplay a
+  // video it cannot see, so hiding it at the start stops playback entirely.
+  // The mask over the title strip does that job instead.
+  frame.dataset.veiled = 'false';
 
   frame.append(holder, veil);
 
@@ -258,10 +249,7 @@ async function openPlayer(stage, match) {
     stage.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
   };
 
-  if (match.id.startsWith('DEMO')) {
-    frame.dataset.veiled = 'false';
-    return mockPlayer(holder, match, finish);
-  }
+  if (match.id.startsWith('DEMO')) return mockPlayer(holder, match, finish);
 
   await loadApi();
 
@@ -285,17 +273,7 @@ async function openPlayer(stage, match) {
       },
       onStateChange: (e) => {
         if (e.data === YT.PlayerState.PLAYING) {
-          // First time through, let the title bar fade before showing anything,
-          // then rewind so nothing is missed.
-          if (frame.dataset.veiled === 'starting') {
-            setTimeout(() => {
-              if (frame.dataset.veiled !== 'starting') return;
-              try { player.seekTo(0, true); } catch {}
-              frame.dataset.veiled = 'false';
-            }, CHROME_FADE_MS);
-          } else {
-            frame.dataset.veiled = 'false';
-          }
+          frame.dataset.veiled = 'false';
           clearInterval(watcher);
           // Pull the player before YouTube's end screen of scored thumbnails.
           watcher = setInterval(() => {
@@ -307,8 +285,7 @@ async function openPlayer(stage, match) {
           }, 250);
         }
 
-        if (e.data === YT.PlayerState.PAUSED && VEIL_ON_PAUSE
-            && frame.dataset.veiled !== 'starting') {
+        if (e.data === YT.PlayerState.PAUSED && VEIL_ON_PAUSE) {
           veilAs('paused');
         }
 

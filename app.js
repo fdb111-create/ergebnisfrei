@@ -245,6 +245,7 @@ async function openPlayer(stage, match) {
   function veilAs(mode) {
     frame.dataset.veiled = mode;
     action.hidden = mode === 'ad';
+    action.disabled = false;
     if (mode === 'cover') {
       veilText.textContent = 'Ready when you are.';
       action.textContent = 'Play';
@@ -319,6 +320,8 @@ async function openPlayer(stage, match) {
 
   let started = false;
   let ticker;
+  let lastAt = -1;
+  let playAskedAt = Date.now();
 
   const player = new YT.Player(holder, {
     videoId: match.id,
@@ -359,46 +362,64 @@ async function openPlayer(stage, match) {
   // Last resort: if nothing has moved after eight seconds, say so rather than
   // sitting on a dead panel.
   setTimeout(() => {
-    if (!started) veilText.textContent = 'This one will not start. Close it and try another, or reload the page.';
+    if (started) return;
+    veilText.textContent = 'This one will not start. Close it and try another, or reload the page.';
+    action.disabled = false;
+    action.textContent = 'Try again';
   }, 8000);
+
+  function markStarted() {
+    if (started) return;
+    started = true;
+    try { player.unMute(); player.setVolume(100); } catch {}
+    setTimeout(() => {
+      try { if (player.isMuted()) soundBtn.hidden = false; } catch {}
+    }, 600);
+  }
 
   function tick() {
     let state = -1;
-    let duration = 0;
     let at = 0;
     try {
       if (typeof player.getPlayerState !== 'function') return;
       state = player.getPlayerState();
-      duration = player.getDuration();
       at = player.getCurrentTime();
     } catch { return; }
 
-    // The clock moving is the one dependable sign that something is running,
-    // whatever state the player claims to be in.
-    const moving = at > 0.2;
+    // YouTube puts the video title in the iframe's title attribute, which the
+    // browser shows as a tooltip on hover — outside the player, where no mask
+    // can reach it. The element is ours, so the attribute can go.
+    try {
+      const el = player.getIframe();
+      if (el && el.title !== 'Match highlights') el.title = 'Match highlights';
+    } catch {}
 
-    // An advert reports its own length rather than the match's. This also
-    // catches mid-rolls, so the corner patch comes back for those.
-    const onAd = duration > 0 && Math.abs(duration - match.duration) > 2;
-    frame.dataset.ad = onAd ? 'true' : 'false';
+    // The match's own clock does not advance while an advert plays, so "the
+    // clock is moving" is the test for the match itself being on screen. It
+    // catches pre-rolls, mid-rolls and buffering without relying on YouTube
+    // reporting an advert's duration, which it does not do dependably.
+    const matchRunning = at > 0.2 && at !== lastAt;
+    lastAt = at;
 
-    if (state === YT.PlayerState.PLAYING || moving) {
-      if (!started) {
-        started = true;
-        try { player.unMute(); player.setVolume(100); } catch {}
-        // If the browser refuses to unmute without a direct click, offer one.
-        setTimeout(() => {
-          try { if (player.isMuted()) soundBtn.hidden = false; } catch {}
-        }, 600);
-      }
-      if (onAd && HIDE_ADVERTS) veilAs('ad');
-      else frame.dataset.veiled = 'false';
+    // The patch over the skip preview stays up until the football is genuinely
+    // running, and returns if the clock ever stalls again.
+    frame.dataset.ad = matchRunning ? 'false' : 'true';
 
-      if (!onAd && at >= match.cutAt) {
-        clearInterval(ticker);
-        player.destroy();
-        finish();
-      }
+    // Once anything is on screen the thumbnail is gone, so the cover can lift.
+    const somethingOnScreen = matchRunning
+      || state === YT.PlayerState.PLAYING
+      || Date.now() - playAskedAt > 3000;
+
+    if (somethingOnScreen) {
+      markStarted();
+      if (HIDE_ADVERTS && !matchRunning) veilAs('ad');
+      else if (frame.dataset.veiled !== 'paused' || matchRunning) frame.dataset.veiled = 'false';
+    }
+
+    if (matchRunning && at >= match.cutAt) {
+      clearInterval(ticker);
+      player.destroy();
+      finish();
       return;
     }
 
@@ -412,7 +433,14 @@ async function openPlayer(stage, match) {
 
   action.addEventListener('click', () => {
     // A real tap on our own page, which is what Safari wants before it will
-    // start an unmuted video.
+    // start an unmuted video. An advert can take a few seconds to arrive, so
+    // say so rather than leaving a button that looks like it did nothing.
+    if (frame.dataset.veiled === 'cover') {
+      action.disabled = true;
+      action.textContent = 'Loading';
+      veilText.textContent = 'Fetching the video. If an advert comes first, it starts here.';
+    }
+    playAskedAt = Date.now();
     try { player.playVideo(); } catch {}
   });
 }

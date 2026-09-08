@@ -1,0 +1,518 @@
+[
+ {
+  "abbr": "FCB",
+  "short": "Bayern",
+  "name": "FC Bayern München",
+  "primary": "#DC052D",
+  "secondary": "#0066B2",
+  "aliases": [
+   "FC Bayern München",
+   "Bayern München",
+   "Bayern Munich",
+   "FC Bayern",
+   "Bayern"
+  ]
+ },
+ {
+  "abbr": "BVB",
+  "short": "Dortmund",
+  "name": "Borussia Dortmund",
+  "primary": "#FDE100",
+  "secondary": "#1A1A1A",
+  "aliases": [
+   "Borussia Dortmund",
+   "BVB",
+   "Dortmund"
+  ]
+ },
+ {
+  "abbr": "B04",
+  "short": "Leverkusen",
+  "name": "Bayer 04 Leverkusen",
+  "primary": "#E32221",
+  "secondary": "#1A1A1A",
+  "aliases": [
+   "Bayer 04 Leverkusen",
+   "Bayer Leverkusen",
+   "Leverkusen"
+  ]
+ },
+ {
+  "abbr": "RBL",
+  "short": "Leipzig",
+  "name": "RB Leipzig",
+  "primary": "#DD0741",
+  "secondary": "#001F47",
+  "aliases": [
+   "RB Leipzig",
+   "RasenBallsport Leipzig",
+   "Leipzig"
+  ]
+ },
+ {
+  "abbr": "VfB",
+  "short": "Stuttgart",
+  "name": "VfB Stuttgart",
+  "primary": "#E32219",
+  "secondary": "#FFFFFF",
+  "aliases": [
+   "VfB Stuttgart",
+   "Stuttgart"
+  ]
+ },
+ {
+  "abbr": "SGE",
+  "short": "Frankfurt",
+  "name": "Eintracht Frankfurt",
+  "primary": "#E1000F",
+  "secondary": "#1A1A1A",
+  "aliases": [
+   "Eintracht Frankfurt",
+   "Frankfurt",
+   "SGE"
+  ]
+ },
+ {
+  "abbr": "TSG",
+  "short": "Hoffenheim",
+  "name": "TSG Hoffenheim",
+  "primary": "#1C63B7",
+  "secondary": "#FFFFFF",
+  "aliases": [
+   "TSG 1899 Hoffenheim",
+   "TSG Hoffenheim",
+   "1899 Hoffenheim",
+   "Hoffenheim"
+  ]
+ },
+ {
+  "abbr": "SCF",
+  "short": "Freiburg",
+  "name": "SC Freiburg",
+  "primary": "#E2001A",
+  "secondary": "#1A1A1A",
+  "aliases": [
+   "SC Freiburg",
+   "Sport-Club Freiburg",
+   "Freiburg"
+  ]
+ },
+ {
+  "abbr": "FCU",
+  "short": "Union Berlin",
+  "name": "1. FC Union Berlin",
+  "primary": "#EB1923",
+  "secondary": "#FFED02",
+  "aliases": [
+   "1. FC Union Berlin",
+   "FC Union Berlin",
+   "Union Berlin",
+   "Union"
+  ]
+ },
+ {
+  "abbr": "SVW",
+  "short": "Bremen",
+  "name": "SV Werder Bremen",
+  "primary": "#1D9053",
+  "secondary": "#FFFFFF",
+  "aliases": [
+   "SV Werder Bremen",
+   "Werder Bremen",
+   "Werder",
+   "Bremen"
+  ]
+ },
+ {
+  "abbr": "M05",
+  "short": "Mainz",
+  "name": "1. FSV Mainz 05",
+  "primary": "#C3141E",
+  "secondary": "#FFFFFF",
+  "aliases": [
+   "1. FSV Mainz 05",
+   "FSV Mainz 05",
+   "Mainz 05",
+   "Mainz"
+  ]
+ },
+ {
+  "abbr": "FCA",
+  "short": "Augsburg",
+  "name": "FC Augsburg",
+  "primary": "#BA3733",
+  "secondary": "#46714D",
+  "aliases": [
+   "FC Augsburg",
+   "Augsburg"
+  ]
+ },
+ {
+  "abbr": "WOB",
+  "short": "Wolfsburg",
+  "name": "VfL Wolfsburg",
+  "primary": "#65B32E",
+  "secondary": "#1A1A1A",
+  "aliases": [
+   "VfL Wolfsburg",
+   "Wolfsburg"
+  ]
+ },
+ {
+  "abbr": "BMG",
+  "short": "Gladbach",
+  "name": "Borussia Mönchengladbach",
+  "primary": "#1A1A1A",
+  "secondary": "#00B04F",
+  "aliases": [
+   "Borussia Mönchengladbach",
+   "Borussia Moenchengladbach",
+   "Mönchengladbach",
+   "Moenchengladbach",
+   "Gladbach",
+   "Borussia M'Gladbach",
+   "M'Gladbach",
+   "Mgladbach"
+  ]
+ },
+ {
+  "abbr": "FCH",
+  "short": "Heidenheim",
+  "name": "1. FC Heidenheim 1846",
+  "primary": "#E30613",
+  "secondary": "#003DA5",
+  "aliases": [
+   "1. FC Heidenheim 1846",
+   "1. FC Heidenheim",
+   "FC Heidenheim",
+   "Heidenheim"
+  ]
+ },
+ {
+  "abbr": "STP",
+  "short": "St. Pauli",
+  "name": "FC St. Pauli",
+  "primary": "#624735",
+  "secondary": "#E30613",
+  "aliases": [
+   "FC St. Pauli",
+   "St. Pauli",
+   "St Pauli",
+   "St.Pauli"
+  ]
+ },
+ {
+  "abbr": "KOE",
+  "short": "Köln",
+  "name": "1. FC Köln",
+  "primary": "#ED1C24",
+  "secondary": "#FFFFFF",
+  "aliases": [
+   "1. FC Köln",
+   "1. FC Koeln",
+   "FC Köln",
+   "Köln",
+   "Koeln",
+   "Cologne"
+  ]
+ },
+ {
+  "abbr": "HSV",
+  "short": "Hamburg",
+  "name": "Hamburger SV",
+  "primary": "#1A1A1A",
+  "secondary": "#0069B4",
+  "aliases": [
+   "Hamburger SV",
+   "Hamburg",
+   "HSV"
+  ]
+ },
+ {
+  "abbr": "S04",
+  "short": "Schalke",
+  "name": "FC Schalke 04",
+  "primary": "#004D9D",
+  "secondary": "#FFFFFF",
+  "aliases": [
+   "FC Schalke 04",
+   "Schalke 04",
+   "Schalke"
+  ]
+ },
+ {
+  "abbr": "BOC",
+  "short": "Bochum",
+  "name": "VfL Bochum 1848",
+  "primary": "#005CA9",
+  "secondary": "#FFFFFF",
+  "aliases": [
+   "VfL Bochum 1848",
+   "VfL Bochum",
+   "Bochum"
+  ]
+ },
+ {
+  "abbr": "KSV",
+  "short": "Kiel",
+  "name": "Holstein Kiel",
+  "primary": "#0D3B7C",
+  "secondary": "#FFFFFF",
+  "aliases": [
+   "Holstein Kiel",
+   "Kiel"
+  ]
+ },
+ {
+  "abbr": "SVD",
+  "short": "Darmstadt",
+  "name": "SV Darmstadt 98",
+  "primary": "#004E9E",
+  "secondary": "#FFFFFF",
+  "aliases": [
+   "SV Darmstadt 98",
+   "Darmstadt 98",
+   "Darmstadt"
+  ]
+ },
+ {
+  "abbr": "BSC",
+  "short": "Hertha",
+  "name": "Hertha BSC",
+  "primary": "#004D9D",
+  "secondary": "#FFFFFF",
+  "aliases": [
+   "Hertha BSC",
+   "Hertha Berlin",
+   "Hertha"
+  ]
+ },
+ {
+  "abbr": "F95",
+  "short": "Düsseldorf",
+  "name": "Fortuna Düsseldorf",
+  "primary": "#DA251D",
+  "secondary": "#FFFFFF",
+  "aliases": [
+   "Fortuna Düsseldorf",
+   "Fortuna Duesseldorf",
+   "Düsseldorf",
+   "Duesseldorf"
+  ]
+ },
+ {
+  "abbr": "FCN",
+  "short": "Nürnberg",
+  "name": "1. FC Nürnberg",
+  "primary": "#8B0000",
+  "secondary": "#FFFFFF",
+  "aliases": [
+   "1. FC Nürnberg",
+   "1. FC Nuernberg",
+   "Nürnberg",
+   "Nuernberg"
+  ]
+ },
+ {
+  "abbr": "SGF",
+  "short": "Fürth",
+  "name": "SpVgg Greuther Fürth",
+  "primary": "#009540",
+  "secondary": "#FFFFFF",
+  "aliases": [
+   "SpVgg Greuther Fürth",
+   "Greuther Fürth",
+   "Fürth",
+   "Fuerth"
+  ]
+ },
+ {
+  "abbr": "PAD",
+  "short": "Paderborn",
+  "name": "SC Paderborn 07",
+  "primary": "#004E9E",
+  "secondary": "#009EE0",
+  "aliases": [
+   "SC Paderborn 07",
+   "Paderborn"
+  ]
+ },
+ {
+  "abbr": "KAI",
+  "short": "Kaiserslautern",
+  "name": "1. FC Kaiserslautern",
+  "primary": "#E1000F",
+  "secondary": "#FFFFFF",
+  "aliases": [
+   "1. FC Kaiserslautern",
+   "Kaiserslautern"
+  ]
+ },
+ {
+  "abbr": "HAN",
+  "short": "Hannover",
+  "name": "Hannover 96",
+  "primary": "#00953E",
+  "secondary": "#1A1A1A",
+  "aliases": [
+   "Hannover 96",
+   "Hannover"
+  ]
+ },
+ {
+  "abbr": "MAG",
+  "short": "Magdeburg",
+  "name": "1. FC Magdeburg",
+  "primary": "#004E9E",
+  "secondary": "#FFFFFF",
+  "aliases": [
+   "1. FC Magdeburg",
+   "Magdeburg"
+  ]
+ },
+ {
+  "abbr": "ELV",
+  "short": "Elversberg",
+  "name": "SV Elversberg",
+  "primary": "#000000",
+  "secondary": "#E30613",
+  "aliases": [
+   "SV Elversberg",
+   "Elversberg"
+  ]
+ },
+ {
+  "abbr": "BRA",
+  "short": "Braunschweig",
+  "name": "Eintracht Braunschweig",
+  "primary": "#FFED00",
+  "secondary": "#0B3E7E",
+  "aliases": [
+   "Eintracht Braunschweig",
+   "Braunschweig"
+  ]
+ },
+ {
+  "abbr": "OSN",
+  "short": "Osnabrück",
+  "name": "VfL Osnabrück",
+  "primary": "#653C1E",
+  "secondary": "#FFFFFF",
+  "aliases": [
+   "VfL Osnabrück",
+   "VfL Osnabrueck",
+   "Osnabrück",
+   "Osnabrueck"
+  ]
+ },
+ {
+  "abbr": "SGD",
+  "short": "Dresden",
+  "name": "Dynamo Dresden",
+  "primary": "#F9D616",
+  "secondary": "#000000",
+  "aliases": [
+   "SG Dynamo Dresden",
+   "Dynamo Dresden",
+   "Dresden"
+  ]
+ },
+ {
+  "abbr": "FCE",
+  "short": "Cottbus",
+  "name": "Energie Cottbus",
+  "primary": "#E30613",
+  "secondary": "#FFFFFF",
+  "aliases": [
+   "FC Energie Cottbus",
+   "Energie Cottbus",
+   "Cottbus"
+  ]
+ },
+ {
+  "abbr": "SCP",
+  "short": "Münster",
+  "name": "Preußen Münster",
+  "primary": "#005B33",
+  "secondary": "#FFFFFF",
+  "aliases": [
+   "SC Preußen Münster",
+   "Preußen Münster",
+   "Preussen Muenster",
+   "Münster",
+   "Muenster"
+  ]
+ },
+ {
+  "abbr": "DSC",
+  "short": "Bielefeld",
+  "name": "Arminia Bielefeld",
+  "primary": "#004E9E",
+  "secondary": "#000000",
+  "aliases": [
+   "DSC Arminia Bielefeld",
+   "Arminia Bielefeld",
+   "Bielefeld"
+  ]
+ },
+ {
+  "abbr": "KFC",
+  "short": "Ulm",
+  "name": "SSV Ulm 1846",
+  "primary": "#F8991D",
+  "secondary": "#000000",
+  "aliases": [
+   "SSV Ulm 1846",
+   "SSV Ulm",
+   "Ulm"
+  ]
+ },
+ {
+  "abbr": "RWE",
+  "short": "Regensburg",
+  "name": "SSV Jahn Regensburg",
+  "primary": "#E2001A",
+  "secondary": "#FFFFFF",
+  "aliases": [
+   "SSV Jahn Regensburg",
+   "Jahn Regensburg",
+   "Regensburg"
+  ]
+ },
+ {
+  "abbr": "WEH",
+  "short": "Wehen",
+  "name": "SV Wehen Wiesbaden",
+  "primary": "#E2001A",
+  "secondary": "#000000",
+  "aliases": [
+   "SV Wehen Wiesbaden",
+   "Wehen Wiesbaden",
+   "Wiesbaden"
+  ]
+ },
+ {
+  "abbr": "SAA",
+  "short": "Saarbrücken",
+  "name": "1. FC Saarbrücken",
+  "primary": "#004E9E",
+  "secondary": "#000000",
+  "aliases": [
+   "1. FC Saarbrücken",
+   "Saarbrücken",
+   "Saarbruecken"
+  ]
+ },
+ {
+  "abbr": "HOL",
+  "short": "Hansa Rostock",
+  "name": "FC Hansa Rostock",
+  "primary": "#004E9E",
+  "secondary": "#FFFFFF",
+  "aliases": [
+   "FC Hansa Rostock",
+   "Hansa Rostock",
+   "Rostock"
+  ]
+ }
+]

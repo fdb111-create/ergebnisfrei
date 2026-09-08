@@ -211,7 +211,8 @@ async function openPlayer(stage, match) {
   revealBtn.className = 'btn btn--quiet';
   revealBtn.type = 'button';
   revealBtn.textContent = 'Reveal score';
-  after.append(done, revealBtn);
+  after.append(done);
+  if (match.hasScore || match.id.startsWith('DEMO')) after.append(revealBtn);
 
   stage.append(frame, after);
 

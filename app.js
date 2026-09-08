@@ -7,16 +7,17 @@
 // you would rather not hide any part of the player at all — see README.
 const VEIL_ON_PAUSE = true;
 
-// Covers YouTube's title strip and the bottom-right corner where an advert's
-// skip button previews the match thumbnail. This BREAKS YouTube's terms, which
-// forbid putting anything in front of the player. Set to false to stay clean.
-// The masks let clicks through, so the controls underneath still work — you
-// just cannot see them. They do not apply in fullscreen.
+// Small black patches over YouTube's title strip and over the bottom-right
+// corner where an advert's skip button previews the match thumbnail. Both let
+// clicks through, so the controls underneath still work. This bends YouTube's
+// rule about putting things in front of the player; set to false to stay clean.
 const MASK_PLAYER_CHROME = true;
 
-// The corner mask only exists to cover an advert's skip preview, so it lifts
-// once adverts are done and gives you the corner of the picture back.
-const CORNER_MASK_MS = 45000;
+// Cover the WHOLE picture while an advert runs, rather than just the corner.
+// Much more aggressive: YouTube's terms name interfering with adverts directly,
+// so leave this off if the site is public. The corner patch above is enough to
+// stop the skip preview spoiling you.
+const HIDE_ADVERTS = false;
 
 // Built-in copy of the demo matches, used only when the page is opened straight
 // from your desktop. Safe to delete once the site is live.
@@ -45,6 +46,7 @@ const OFFLINE_SCORES = { DEMO_01: [2, 2], DEMO_02: [1, 0], DEMO_03: [3, 1], DEMO
 
 const board = document.getElementById('board');
 let apiReady = null;
+let closeOpenMatch = null; // only one match plays at a time
 
 // ------------------------------------------------------------------ setup --
 
@@ -171,11 +173,28 @@ function matchEl(match) {
 
   wrap.append(row, stage);
 
+  function close() {
+    // Tearing the player down rather than hiding it, so nothing keeps playing
+    // out of sight.
+    if (stage.teardown) stage.teardown();
+    stage.teardown = null;
+    stage.replaceChildren();
+    delete stage.dataset.finished;
+    wrap.dataset.open = 'false';
+    row.setAttribute('aria-expanded', 'false');
+    play.textContent = 'Watch';
+    if (closeOpenMatch === close) closeOpenMatch = null;
+  }
+
   row.addEventListener('click', () => {
-    if (wrap.dataset.open === 'true') return;
+    if (wrap.dataset.open === 'true') return close();
+
+    if (closeOpenMatch) closeOpenMatch();
+    closeOpenMatch = close;
+
     wrap.dataset.open = 'true';
     row.setAttribute('aria-expanded', 'true');
-    play.textContent = 'Playing';
+    play.textContent = 'Close';
     openPlayer(stage, match);
   });
 
@@ -205,51 +224,41 @@ async function openPlayer(stage, match) {
   const veil = document.createElement('div');
   veil.className = 'veil';
   const veilText = document.createElement('p');
-  const resume = document.createElement('button');
-  resume.className = 'btn';
-  resume.type = 'button';
-  resume.textContent = 'Resume';
-  veil.append(veilText, resume);
-
-  function veilAs(mode) {
-    frame.dataset.veiled = mode;
-    resume.hidden = mode === 'ad';
-    if (mode === 'cover') {
-      // Until playback is confirmed, YouTube shows the video's own thumbnail,
-      // which is a scoreboard. Nothing of the player may be visible yet.
-      veilText.textContent = 'Ready when you are.';
-      resume.textContent = 'Play';
-    } else if (mode === 'ad') {
-      veilText.textContent = 'Advert playing. Its skip button previews the match thumbnail, so the picture stays covered. Click the bottom right corner to skip — the button is there, just out of sight.';
-    } else {
-      veilText.textContent = 'Paused. YouTube fills a paused video with other matches and their scores, so the picture stays covered until you carry on.';
-      resume.textContent = 'Resume';
-    }
-  }
-
-  veilAs('cover');
-
+  const action = document.createElement('button');
+  action.className = 'btn';
+  action.type = 'button';
+  veil.append(veilText, action);
   frame.append(holder, veil);
 
   if (MASK_PLAYER_CHROME) {
     const top = document.createElement('div');
     top.className = 'mask mask--top';
+    frame.append(top);
+    // Only shown while an advert runs — see tick(). Labelled so you can find
+    // YouTube's skip button without seeing the thumbnail behind it.
     const corner = document.createElement('div');
     corner.className = 'mask mask--corner';
-    frame.append(top, corner);
-    setTimeout(() => corner.remove(), CORNER_MASK_MS);
+    corner.textContent = 'Skip here';
+    frame.append(corner);
   }
 
-  const after = document.createElement('div');
-  after.className = 'after';
-  const done = document.createElement('p');
-  done.textContent = 'Stopped early, so YouTube could not suggest other matches.';
-  const revealBtn = document.createElement('button');
-  revealBtn.className = 'btn btn--quiet';
-  revealBtn.type = 'button';
-  revealBtn.textContent = 'Reveal score';
-  after.append(done);
-  if (match.hasScore || match.id.startsWith('DEMO')) after.append(revealBtn);
+  function veilAs(mode) {
+    frame.dataset.veiled = mode;
+    action.hidden = mode === 'ad';
+    if (mode === 'cover') {
+      veilText.textContent = 'Ready when you are.';
+      action.textContent = 'Play';
+    } else if (mode === 'ad') {
+      veilText.textContent = 'Advert playing. Click the bottom right corner to skip.';
+    } else if (mode === 'paused') {
+      veilText.textContent = 'Paused. YouTube fills a paused video with other matches and their scores, so the picture stays covered until you carry on.';
+      action.textContent = 'Resume';
+    }
+  }
+
+  // Covered from the outset: before playback starts, YouTube shows the video's
+  // own thumbnail, and that thumbnail is a scoreboard.
+  veilAs('cover');
 
   const controls = document.createElement('div');
   controls.className = 'stage-controls';
@@ -266,22 +275,40 @@ async function openPlayer(stage, match) {
     else fsBtn.textContent = 'Fullscreen not supported here';
   });
 
-  stage.append(frame, controls, after);
+  const after = document.createElement('div');
+  after.className = 'after';
+  const done = document.createElement('p');
+  done.textContent = 'Stopped early, so YouTube could not suggest other matches.';
+  const revealBtn = document.createElement('button');
+  revealBtn.className = 'btn btn--quiet';
+  revealBtn.type = 'button';
+  revealBtn.textContent = 'Reveal score';
+  after.append(done);
+  if (match.hasScore || match.id.startsWith('DEMO')) after.append(revealBtn);
 
   revealBtn.addEventListener('click', async () => {
     revealBtn.replaceWith(await revealEl(match));
   });
+
+  stage.append(frame, controls, after);
 
   const finish = () => {
     stage.dataset.finished = 'true';
     stage.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
   };
 
-  if (match.id.startsWith('DEMO')) return mockPlayer(holder, match, finish);
+  if (match.id.startsWith('DEMO')) {
+    frame.dataset.veiled = 'false';
+    const mockTimer = mockPlayer(holder, match, finish);
+    stage.teardown = () => clearInterval(mockTimer);
+    return;
+  }
 
   await loadApi();
 
-  let watcher;
+  let started = false;
+  let ticker;
+
   const player = new YT.Player(holder, {
     videoId: match.id,
     host: 'https://www.youtube-nocookie.com',
@@ -292,57 +319,68 @@ async function openPlayer(stage, match) {
       iv_load_policy: 3,
       cc_load_policy: 0,
       // YouTube's own fullscreen button would show the bare iframe and leave
-      // the masks behind, so it is turned off in favour of the button below.
+      // the masks behind, so it is turned off in favour of our own.
       fs: 0,
       origin: location.origin
     },
     events: {
-      onReady: (e) => e.target.playVideo(),
-      onError: () => {
-        clearInterval(watcher);
-        frame.replaceChildren(errorEl());
+      onReady: (e) => {
+        try { e.target.playVideo(); } catch {}
+        // Polling rather than waiting on events: the PLAYING event is not
+        // dependable when an advert loads first, which used to leave the cover
+        // stuck up with no way past it.
+        ticker = setInterval(tick, 250);
+        stage.teardown = () => {
+          clearInterval(ticker);
+          try { player.destroy(); } catch {}
+        };
       },
-      onStateChange: (e) => {
-        if (e.data === YT.PlayerState.PLAYING) {
-          if (frame.dataset.veiled !== 'ad') frame.dataset.veiled = 'false';
-          clearInterval(watcher);
-          watcher = setInterval(() => {
-            // An advert reports its own length, not the match's. That is how we
-            // know one is running, and the whole picture stays covered until it
-            // is over — the skip button carries the match thumbnail.
-            let duration = 0;
-            try { duration = player.getDuration(); } catch {}
-            const onAd = duration > 0 && Math.abs(duration - match.duration) > 2;
-
-            if (onAd) { if (frame.dataset.veiled !== 'ad') veilAs('ad'); return; }
-            if (frame.dataset.veiled === 'ad') frame.dataset.veiled = 'false';
-
-            // Pull the player before YouTube's end screen of scored thumbnails.
-            if (player.getCurrentTime() >= match.cutAt) {
-              clearInterval(watcher);
-              player.destroy();
-              finish();
-            }
-          }, 250);
-        }
-
-        if (e.data === YT.PlayerState.PAUSED && VEIL_ON_PAUSE) {
-          veilAs('paused');
-        }
-
-        if (e.data === YT.PlayerState.ENDED) {
-          clearInterval(watcher);
-          player.destroy();
-          finish();
-        }
+      onError: () => {
+        clearInterval(ticker);
+        frame.replaceChildren(errorEl());
       }
     }
   });
 
-  // Clicking here is a real tap on our own page, which is what Safari wants
-  // before it will start an unmuted video. The cover lifts only once playback
-  // is actually running, never on the click alone.
-  resume.addEventListener('click', () => {
+  function tick() {
+    let state = -1;
+    let duration = 0;
+    let at = 0;
+    try {
+      state = player.getPlayerState();
+      duration = player.getDuration();
+      at = player.getCurrentTime();
+    } catch { return; }
+
+    // An advert reports its own length rather than the match's. This also
+    // catches mid-rolls, so the corner patch comes back for those.
+    const onAd = duration > 0 && Math.abs(duration - match.duration) > 2;
+    frame.dataset.ad = onAd ? 'true' : 'false';
+
+    if (state === YT.PlayerState.PLAYING) {
+      started = true;
+      if (onAd && HIDE_ADVERTS) veilAs('ad');
+      else frame.dataset.veiled = 'false';
+
+      if (!onAd && at >= match.cutAt) {
+        clearInterval(ticker);
+        player.destroy();
+        finish();
+      }
+      return;
+    }
+
+    if (state === YT.PlayerState.PAUSED && started && VEIL_ON_PAUSE) veilAs('paused');
+    if (state === YT.PlayerState.ENDED) {
+      clearInterval(ticker);
+      player.destroy();
+      finish();
+    }
+  }
+
+  action.addEventListener('click', () => {
+    // A real tap on our own page, which is what Safari wants before it will
+    // start an unmuted video.
     try { player.playVideo(); } catch {}
   });
 }
@@ -372,7 +410,7 @@ async function revealEl(match) {
   return el;
 }
 
-// Stand-in player for the shipped demo rows. Deleted once you have real data.
+// Stand-in player for the shipped demo rows.
 function mockPlayer(holder, match, finish) {
   holder.className = 'holder mock';
   const label = document.createElement('p');
@@ -389,4 +427,6 @@ function mockPlayer(holder, match, finish) {
     fill.style.width = Math.min(100, (t / match.cutAt) * 100) + '%';
     if (t >= match.cutAt) { clearInterval(tick); finish(); }
   }, 60);
+
+  return tick;
 }

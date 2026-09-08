@@ -226,7 +226,16 @@ h1, h2, h3, p { margin: 0; }
 
 .match[data-open="true"] .match-row { padding-bottom: 0.6rem; }
 .match[data-open="true"] .play { color: var(--dim); }
-.match[data-open="true"] .play::after { border-left-color: var(--dim); }
+/* Open rows show a close marker rather than a play triangle. */
+.match[data-open="true"] .play::after {
+  border: 0;
+  width: 11px;
+  height: 11px;
+  background:
+    linear-gradient(to bottom, transparent 45%, var(--dim) 45% 55%, transparent 55%) rotate(45deg),
+    linear-gradient(to right, transparent 45%, var(--dim) 45% 55%, transparent 55%);
+  transform: rotate(45deg);
+}
 
 /* ---------------------------------------------------------------- player -- */
 
@@ -381,7 +390,23 @@ h1, h2, h3, p { margin: 0; }
   min-height: 36px;
 }
 
-.mask--corner { right: 0; bottom: 0; width: 30%; height: 14%; min-height: 40px; }
+.mask--corner {
+  right: 0;
+  bottom: 0;
+  width: 34%;
+  height: 17%;
+  min-height: 48px;
+  display: none;
+  place-items: center;
+  color: var(--dim);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* Present only while an advert is running. */
+.frame[data-ad="true"] .mask--corner { display: grid; }
 
 /* Fullscreen applies to the whole box, so the masks scale with the picture. */
 .frame:fullscreen,

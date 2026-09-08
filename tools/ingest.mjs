@@ -110,6 +110,18 @@ async function fetchDetails(ids) {
   return out;
 }
 
+// Is this video actually watchable in the UK, and can we embed it?
+function playableHere(video) {
+  if (video.status?.embeddable === false) return false;
+  if (video.status?.privacyStatus !== 'public') return false;
+
+  const r = video.contentDetails?.regionRestriction;
+  if (!r) return true;
+  if (r.allowed && !r.allowed.includes(REGION)) return false;
+  if (r.blocked && r.blocked.includes(REGION)) return false;
+  return true;
+}
+
 // -------------------------------------------------------------------- main --
 
 const playlistId = await findUploadsPlaylist();

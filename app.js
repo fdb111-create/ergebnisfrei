@@ -262,11 +262,22 @@ async function openPlayer(stage, match) {
 
   const controls = document.createElement('div');
   controls.className = 'stage-controls';
+  const soundBtn = document.createElement('button');
+  soundBtn.className = 'btn btn--quiet';
+  soundBtn.type = 'button';
+  soundBtn.textContent = 'Turn sound on';
+  soundBtn.hidden = true;
+
   const fsBtn = document.createElement('button');
   fsBtn.className = 'btn btn--quiet';
   fsBtn.type = 'button';
   fsBtn.textContent = 'Fullscreen';
-  controls.append(fsBtn);
+  controls.append(soundBtn, fsBtn);
+
+  soundBtn.addEventListener('click', () => {
+    try { player.unMute(); player.setVolume(100); } catch {}
+    soundBtn.hidden = true;
+  });
 
   fsBtn.addEventListener('click', () => {
     // Fullscreen the whole box, not the iframe, so the masks come too.
@@ -314,6 +325,10 @@ async function openPlayer(stage, match) {
     host: 'https://www.youtube-nocookie.com',
     playerVars: {
       autoplay: 1,
+      // Browsers block autoplay with sound, which used to strand the cover with
+      // the thumbnail behind it. Muted autoplay is always allowed, so start
+      // silent and turn the sound on the moment it is actually running.
+      mute: 1,
       playsinline: 1,
       rel: 0,
       iv_load_policy: 3,
@@ -358,7 +373,14 @@ async function openPlayer(stage, match) {
     frame.dataset.ad = onAd ? 'true' : 'false';
 
     if (state === YT.PlayerState.PLAYING) {
-      started = true;
+      if (!started) {
+        started = true;
+        try { player.unMute(); player.setVolume(100); } catch {}
+        // If the browser refuses to unmute without a direct click, offer one.
+        setTimeout(() => {
+          try { if (player.isMuted()) soundBtn.hidden = false; } catch {}
+        }, 600);
+      }
       if (onAd && HIDE_ADVERTS) veilAs('ad');
       else frame.dataset.veiled = 'false';
 

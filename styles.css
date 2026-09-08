@@ -424,5 +424,6 @@ h1, h2, h3, p { margin: 0; }
 .stage-controls {
   display: flex;
   justify-content: flex-end;
+  gap: 0.6rem;
   padding-top: 0.6rem;
 }

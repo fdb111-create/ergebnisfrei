@@ -1,5 +1,12 @@
-/* The bit most likely to need fixing: turning a YouTube title into a fixture.
-   Kept separate so you can test it without an API key — see test-parse.mjs. */
+/* Turns a YouTube title into a fixture.
+
+   Real Bundesliga titles look like:
+     On Top of the League | EINTRACHT FRANKFURT - FC AUGSBURG | Highlights | Matchday 3 - Bundesliga
+     GREUTHER FÜRTH - HEIDENHEIM | Highlights | Matchday 4 - Bundesliga 2 2026/27
+
+   Note there is no scoreline in them. The clubs sit in their own segment
+   between pipes, and the headline before it often gives the game away in
+   words ("Comeback Complete!"), which is why the site never displays it. */
 
 import { readFile } from 'node:fs/promises';
 import { fileURLToPath } from 'node:url';
@@ -15,10 +22,12 @@ const aliasIndex = clubs
   .sort((a, b) => b.alias.length - a.alias.length);
 
 export const HIGHLIGHT_WORDS = /(highlights|zusammenfassung|all goals|alle tore)/i;
-export const EXCLUDE_WORDS = /(u19|u17|u21|frauen|women|top 5|goal of the (month|week|season)|of the season|classic|throwback|preview|press conference)/i;
+export const EXCLUDE_WORDS = /(u19|u17|u21|frauen|women|top \d|goal of the (month|week|season)|of the season|classic|throwback|preview|press conference|all highlights|every goal)/i;
 
 const SCORE = /(\d{1,2})\s*[-–—:]\s*(\d{1,2})/;
 const MATCHDAY = /(?:matchday|spieltag|md)\s*[.:]?\s*(\d{1,2})/i;
+// The 2 must not be the start of a season number, or 'Bundesliga 2026/27' matches.
+const SECOND_TIER = /(bundesliga\s*2(?!\d)|2\.\s*bundesliga|2\.\s*liga)/i;
 
 function findClubs(text) {
   const found = [];
@@ -42,24 +51,28 @@ export function parseTitle(title) {
   if (!HIGHLIGHT_WORDS.test(title)) return null;
   if (EXCLUDE_WORDS.test(title)) return null;
 
-  const score = title.match(SCORE);
-  if (!score) return null;
-
-  // Club names usually sit to the left of the scoreline ("Bayern - Dortmund 2-1"),
-  // but some titles put the score in the middle ("Bayern 2-1 Dortmund"), so fall
-  // back to scanning the whole title.
-  let teams = findClubs(title.slice(0, score.index));
+  // Work segment by segment. The fixture lives in whichever piece names two
+  // clubs, which keeps a headline like "Elversberg Do It AGAIN!" from
+  // reversing home and away.
+  let teams = [];
+  for (const segment of title.split('|')) {
+    const inSegment = findClubs(segment);
+    if (inSegment.length >= 2) { teams = inSegment; break; }
+  }
   if (teams.length < 2) teams = findClubs(title);
   if (teams.length < 2) return null;
 
   const matchday = title.match(MATCHDAY);
+  const score = title.match(SCORE);
 
   return {
     home: teams[0],
     away: teams[1],
-    homeGoals: Number(score[1]),
-    awayGoals: Number(score[2]),
-    matchday: matchday ? Number(matchday[1]) : null
+    matchday: matchday ? Number(matchday[1]) : null,
+    secondTier: SECOND_TIER.test(title),
+    // Usually absent. Kept in case the channel ever puts scores back in titles.
+    homeGoals: score ? Number(score[1]) : null,
+    awayGoals: score ? Number(score[2]) : null
   };
 }
 

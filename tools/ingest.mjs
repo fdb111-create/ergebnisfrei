@@ -31,6 +31,7 @@ const CHANNEL_ID = process.env.YT_CHANNEL_ID || '';
 const REGION = (process.env.REGION || 'GB').toUpperCase();
 const DAYS = Number(process.env.DAYS || 21);
 const MAX_PAGES = Number(process.env.MAX_PAGES || 4); // 4 pages = up to 200 uploads
+const INCLUDE_BL2 = process.env.INCLUDE_BL2 === 'true'; // set true to add 2. Bundesliga
 
 if (!API_KEY) {
   console.error('\nNo YT_API_KEY found.');
@@ -144,11 +145,13 @@ const details = await fetchDetails(candidates.map((c) => c.id));
 const matches = [];
 const reveals = [];
 let blocked = 0;
+let tierSkipped = 0;
 
 for (const c of candidates) {
   const video = details.get(c.id);
   if (!video) continue;
   if (!playableHere(video)) { blocked++; continue; }
+  if (c.secondTier && !INCLUDE_BL2) { tierSkipped++; continue; }
 
   const duration = toSeconds(video.contentDetails.duration);
   if (duration < 45) continue; // shorts and teasers
@@ -157,6 +160,8 @@ for (const c of candidates) {
     id: c.id,
     publishedAt: c.publishedAt,
     matchday: c.matchday,
+    secondTier: c.secondTier,
+    hasScore: c.homeGoals !== null,
     duration,
     // Stop the player this many seconds early so YouTube's end screen —
     // which is a wall of thumbnails with scores on them — never appears.
@@ -165,7 +170,7 @@ for (const c of candidates) {
     away: { abbr: c.away.abbr, short: c.away.short, name: c.away.name, primary: c.away.primary, secondary: c.away.secondary }
   });
 
-  reveals.push({ id: c.id, homeGoals: c.homeGoals, awayGoals: c.awayGoals });
+  if (c.homeGoals !== null) reveals.push({ id: c.id, homeGoals: c.homeGoals, awayGoals: c.awayGoals });
 }
 
 matches.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
@@ -188,6 +193,7 @@ for (const r of reveals) {
 
 console.log(`\nWrote ${matches.length} matches to data/videos.json`);
 if (blocked) console.log(`Skipped ${blocked} not playable in ${REGION}.`);
+if (tierSkipped) console.log(`Skipped ${tierSkipped} from 2. Bundesliga (set INCLUDE_BL2 to include them).`);
 
 if (rejected.length) {
   console.log(`\n${rejected.length} video(s) looked like highlights but could not be read.`);

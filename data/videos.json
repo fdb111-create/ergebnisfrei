@@ -1,6 +1,6 @@
 {
   "region": "GB",
-  "updatedAt": "2026-09-08T20:27:24.238Z",
+  "updatedAt": "2026-09-08T21:25:17.201Z",
   "matches": [
     {
       "id": "zaivTrVc3B4",
@@ -706,29 +706,6 @@
         "name": "Borussia Dortmund",
         "primary": "#FDE100",
         "secondary": "#1A1A1A"
-      },
-      "away": {
-        "abbr": "FCB",
-        "short": "Bayern",
-        "name": "FC Bayern München",
-        "primary": "#DC052D",
-        "secondary": "#0066B2"
-      }
-    },
-    {
-      "id": "CPIZVT6D4oA",
-      "publishedAt": "2026-08-18T21:03:38Z",
-      "matchday": null,
-      "secondTier": false,
-      "hasScore": true,
-      "duration": 365,
-      "cutAt": 361,
-      "home": {
-        "abbr": "FCH",
-        "short": "Heidenheim",
-        "name": "1. FC Heidenheim 1846",
-        "primary": "#E30613",
-        "secondary": "#003DA5"
       },
       "away": {
         "abbr": "FCB",

@@ -13,11 +13,12 @@ const VEIL_ON_PAUSE = true;
 // rule about putting things in front of the player; set to false to stay clean.
 const MASK_PLAYER_CHROME = true;
 
-// Cover the WHOLE picture while an advert runs, rather than just the corner.
-// Much more aggressive: YouTube's terms name interfering with adverts directly,
-// so leave this off if the site is public. The corner patch above is enough to
-// stop the skip preview spoiling you.
-const HIDE_ADVERTS = false;
+// Cover the WHOLE picture while an advert runs. The advert still plays and is
+// still counted; you just do not watch it. YouTube's terms name interfering
+// with adverts directly, so this must be set back to false before the site is
+// ever made public. On at the moment because patches over the skip preview
+// could not be made to cover it reliably at every window size.
+const HIDE_ADVERTS = true;
 
 // Built-in copy of the demo matches, used only when the page is opened straight
 // from your desktop. Safe to delete once the site is live.
@@ -253,7 +254,7 @@ async function openPlayer(stage, match) {
       veilText.textContent = 'Ready when you are.';
       action.textContent = 'Play';
     } else if (mode === 'ad') {
-      veilText.textContent = 'Advert playing. Click the bottom right corner to skip.';
+      veilText.textContent = 'Advert playing, hidden because its skip button previews the match thumbnail. Wait about five seconds, then click the bottom right of this panel to skip.';
     } else if (mode === 'paused') {
       veilText.textContent = 'Paused. YouTube fills a paused video with other matches and their scores, so the picture stays covered until you carry on.';
       action.textContent = 'Resume';
@@ -413,10 +414,14 @@ async function openPlayer(stage, match) {
       || state === YT.PlayerState.PLAYING
       || Date.now() - playAskedAt > 3000;
 
+    const paused = state === YT.PlayerState.PAUSED;
+
     if (somethingOnScreen) {
       markStarted();
-      if (HIDE_ADVERTS && !matchRunning) veilAs('ad');
-      else if (frame.dataset.veiled !== 'paused' || matchRunning) frame.dataset.veiled = 'false';
+      // A stalled clock means an advert — unless the match is simply paused,
+      // where the clock stops for a different reason.
+      if (HIDE_ADVERTS && !matchRunning && !paused) veilAs('ad');
+      else if (matchRunning) frame.dataset.veiled = 'false';
     }
 
     if (matchRunning && at >= match.cutAt) {

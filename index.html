@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>No Spoiler German Football — Bundesliga highlights without the score</title>
+<meta name="description" content="Every Bundesliga match, playable in the UK, with no scoreline in the thumbnail, the title or the page.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,75..125,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="masthead">
+  <h1 class="wordmark">No Spoiler German Football</h1>
+  <p class="strap">Bundesliga highlights, UK edition</p>
+</header>
+
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="board" aria-hidden="true">
+    <span class="board-crest board-crest--blank"></span>
+    <span class="board-score">–<i>:</i>–</span>
+    <span class="board-crest board-crest--blank"></span>
+  </div>
+  <h2 id="hero-heading" class="hero-line">You will not find out here.</h2>
+  <p class="hero-note">
+    No scoreline in the thumbnail, the title, the page or the file that loads it.
+    Each video also stops a moment early, before YouTube can fill the screen
+    with other matches you have not watched yet.
+  </p>
+</section>
+
+<main id="board" class="fixtures" aria-live="polite" aria-busy="true">
+  <p class="state">Loading the matchday…</p>
+</main>
+
+<footer class="colophon">
+  <p>Highlights are played through the official YouTube player and stay on YouTube's servers. Colours stand in for club badges.</p>
+  <p class="updated" id="updated"></p>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

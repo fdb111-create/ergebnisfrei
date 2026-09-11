@@ -1,7 +1,30 @@
 {
   "region": "GB",
-  "updatedAt": "2026-09-11T20:27:22.632Z",
+  "updatedAt": "2026-09-11T21:25:07.150Z",
   "matches": [
+    {
+      "id": "jc7yZJThVnU",
+      "publishedAt": "2026-09-11T21:04:28Z",
+      "matchday": 3,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 65,
+      "cutAt": 61,
+      "home": {
+        "abbr": "FCU",
+        "short": "Union Berlin",
+        "name": "1. FC Union Berlin",
+        "primary": "#EB1923",
+        "secondary": "#FFED02"
+      },
+      "away": {
+        "abbr": "S04",
+        "short": "Schalke",
+        "name": "FC Schalke 04",
+        "primary": "#004D9D",
+        "secondary": "#FFFFFF"
+      }
+    },
     {
       "id": "zaivTrVc3B4",
       "publishedAt": "2026-09-06T22:00:39Z",

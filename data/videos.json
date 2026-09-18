@@ -1,7 +1,30 @@
 {
   "region": "GB",
-  "updatedAt": "2026-09-18T20:26:10.979Z",
+  "updatedAt": "2026-09-18T21:25:44.899Z",
   "matches": [
+    {
+      "id": "YyRS82WiIog",
+      "publishedAt": "2026-09-18T21:06:22Z",
+      "matchday": 4,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 66,
+      "cutAt": 62,
+      "home": {
+        "abbr": "FCB",
+        "short": "Bayern",
+        "name": "FC Bayern München",
+        "primary": "#DC052D",
+        "secondary": "#0066B2"
+      },
+      "away": {
+        "abbr": "FCU",
+        "short": "Union Berlin",
+        "name": "1. FC Union Berlin",
+        "primary": "#EB1923",
+        "secondary": "#FFED02"
+      }
+    },
     {
       "id": "h-BXJf4NXos",
       "publishedAt": "2026-09-13T22:00:31Z",
@@ -897,29 +920,6 @@
         "name": "Bayer 04 Leverkusen",
         "primary": "#E32221",
         "secondary": "#1A1A1A"
-      }
-    },
-    {
-      "id": "iUqD611x9Ps",
-      "publishedAt": "2026-08-28T20:44:00Z",
-      "matchday": 1,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 64,
-      "cutAt": 60,
-      "home": {
-        "abbr": "FCB",
-        "short": "Bayern",
-        "name": "FC Bayern München",
-        "primary": "#DC052D",
-        "secondary": "#0066B2"
-      },
-      "away": {
-        "abbr": "VfB",
-        "short": "Stuttgart",
-        "name": "VfB Stuttgart",
-        "primary": "#E32219",
-        "secondary": "#FFFFFF"
       }
     }
   ]

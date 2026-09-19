@@ -1,7 +1,30 @@
 {
   "region": "GB",
-  "updatedAt": "2026-09-19T18:27:53.724Z",
+  "updatedAt": "2026-09-19T19:23:07.284Z",
   "matches": [
+    {
+      "id": "dmE_gTw-Ukc",
+      "publishedAt": "2026-09-19T18:44:29Z",
+      "matchday": 4,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 66,
+      "cutAt": 62,
+      "home": {
+        "abbr": "VfB",
+        "short": "Stuttgart",
+        "name": "VfB Stuttgart",
+        "primary": "#E32219",
+        "secondary": "#FFFFFF"
+      },
+      "away": {
+        "abbr": "BVB",
+        "short": "Dortmund",
+        "name": "Borussia Dortmund",
+        "primary": "#FDE100",
+        "secondary": "#1A1A1A"
+      }
+    },
     {
       "id": "IP2yua_ilfQ",
       "publishedAt": "2026-09-19T16:04:55Z",
@@ -897,29 +920,6 @@
         "name": "SV Werder Bremen",
         "primary": "#1D9053",
         "secondary": "#FFFFFF"
-      }
-    },
-    {
-      "id": "ds9hZZKvAWM",
-      "publishedAt": "2026-08-29T18:46:26Z",
-      "matchday": 1,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 61,
-      "cutAt": 57,
-      "home": {
-        "abbr": "BVB",
-        "short": "Dortmund",
-        "name": "Borussia Dortmund",
-        "primary": "#FDE100",
-        "secondary": "#1A1A1A"
-      },
-      "away": {
-        "abbr": "HSV",
-        "short": "Hamburg",
-        "name": "Hamburger SV",
-        "primary": "#1A1A1A",
-        "secondary": "#0069B4"
       }
     }
   ]

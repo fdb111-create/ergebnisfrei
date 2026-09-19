@@ -1,7 +1,30 @@
 {
   "region": "GB",
-  "updatedAt": "2026-09-19T15:25:15.672Z",
+  "updatedAt": "2026-09-19T16:26:20.835Z",
   "matches": [
+    {
+      "id": "IP2yua_ilfQ",
+      "publishedAt": "2026-09-19T16:04:55Z",
+      "matchday": 4,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 60,
+      "cutAt": 56,
+      "home": {
+        "abbr": "SVW",
+        "short": "Bremen",
+        "name": "SV Werder Bremen",
+        "primary": "#1D9053",
+        "secondary": "#FFFFFF"
+      },
+      "away": {
+        "abbr": "FCA",
+        "short": "Augsburg",
+        "name": "FC Augsburg",
+        "primary": "#BA3733",
+        "secondary": "#46714D"
+      }
+    },
     {
       "id": "YyRS82WiIog",
       "publishedAt": "2026-09-18T21:06:22Z",
@@ -897,29 +920,6 @@
         "name": "Hamburger SV",
         "primary": "#1A1A1A",
         "secondary": "#0069B4"
-      }
-    },
-    {
-      "id": "BXHCH7Lnz1E",
-      "publishedAt": "2026-08-29T16:13:48Z",
-      "matchday": 1,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 72,
-      "cutAt": 68,
-      "home": {
-        "abbr": "ELV",
-        "short": "Elversberg",
-        "name": "SV Elversberg",
-        "primary": "#000000",
-        "secondary": "#E30613"
-      },
-      "away": {
-        "abbr": "B04",
-        "short": "Leverkusen",
-        "name": "Bayer 04 Leverkusen",
-        "primary": "#E32221",
-        "secondary": "#1A1A1A"
       }
     }
   ]

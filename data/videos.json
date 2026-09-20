@@ -1,7 +1,30 @@
 {
   "region": "GB",
-  "updatedAt": "2026-09-20T17:24:45.325Z",
+  "updatedAt": "2026-09-20T18:27:57.413Z",
   "matches": [
+    {
+      "id": "3oBANtmWr7M",
+      "publishedAt": "2026-09-20T17:31:15Z",
+      "matchday": 4,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 62,
+      "cutAt": 58,
+      "home": {
+        "abbr": "S04",
+        "short": "Schalke",
+        "name": "FC Schalke 04",
+        "primary": "#004D9D",
+        "secondary": "#FFFFFF"
+      },
+      "away": {
+        "abbr": "ELV",
+        "short": "Elversberg",
+        "name": "SV Elversberg",
+        "primary": "#000000",
+        "secondary": "#E30613"
+      }
+    },
     {
       "id": "G0Ax1HeP9EY",
       "publishedAt": "2026-09-20T15:32:33Z",
@@ -884,29 +907,6 @@
       "hasScore": false,
       "duration": 232,
       "cutAt": 228,
-      "home": {
-        "abbr": "FCA",
-        "short": "Augsburg",
-        "name": "FC Augsburg",
-        "primary": "#BA3733",
-        "secondary": "#46714D"
-      },
-      "away": {
-        "abbr": "S04",
-        "short": "Schalke",
-        "name": "FC Schalke 04",
-        "primary": "#004D9D",
-        "secondary": "#FFFFFF"
-      }
-    },
-    {
-      "id": "rl7DwuTaipo",
-      "publishedAt": "2026-08-30T18:00:25Z",
-      "matchday": 1,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 67,
-      "cutAt": 63,
       "home": {
         "abbr": "FCA",
         "short": "Augsburg",

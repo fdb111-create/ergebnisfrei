@@ -1,6 +1,6 @@
 {
   "region": "GB",
-  "updatedAt": "2026-09-20T22:25:19.215Z",
+  "updatedAt": "2026-09-21T13:27:13.007Z",
   "matches": [
     {
       "id": "ofUcybZlWBE",
@@ -896,29 +896,6 @@
         "short": "Köln",
         "name": "1. FC Köln",
         "primary": "#ED1C24",
-        "secondary": "#FFFFFF"
-      }
-    },
-    {
-      "id": "9ZVxzxeF-L4",
-      "publishedAt": "2026-08-31T09:42:35Z",
-      "matchday": 1,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 235,
-      "cutAt": 231,
-      "home": {
-        "abbr": "SCF",
-        "short": "Freiburg",
-        "name": "SC Freiburg",
-        "primary": "#E2001A",
-        "secondary": "#1A1A1A"
-      },
-      "away": {
-        "abbr": "SVW",
-        "short": "Bremen",
-        "name": "SV Werder Bremen",
-        "primary": "#1D9053",
         "secondary": "#FFFFFF"
       }
     }

@@ -1,6 +1,6 @@
 {
   "region": "GB",
-  "updatedAt": "2026-09-25T20:26:46.789Z",
+  "updatedAt": "2026-09-25T21:27:13.254Z",
   "matches": [
     {
       "id": "ofUcybZlWBE",
@@ -874,29 +874,6 @@
         "name": "Borussia Dortmund",
         "primary": "#FDE100",
         "secondary": "#1A1A1A"
-      }
-    },
-    {
-      "id": "aqCJdDtkd5Q",
-      "publishedAt": "2026-09-04T20:56:36Z",
-      "matchday": 2,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 57,
-      "cutAt": 53,
-      "home": {
-        "abbr": "VfB",
-        "short": "Stuttgart",
-        "name": "VfB Stuttgart",
-        "primary": "#E32219",
-        "secondary": "#FFFFFF"
-      },
-      "away": {
-        "abbr": "KOE",
-        "short": "Köln",
-        "name": "1. FC Köln",
-        "primary": "#ED1C24",
-        "secondary": "#FFFFFF"
       }
     }
   ]

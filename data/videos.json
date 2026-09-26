@@ -1,6 +1,6 @@
 {
   "region": "GB",
-  "updatedAt": "2026-09-26T18:29:58.911Z",
+  "updatedAt": "2026-09-26T19:24:44.710Z",
   "matches": [
     {
       "id": "ofUcybZlWBE",
@@ -805,29 +805,6 @@
         "name": "1. FSV Mainz 05",
         "primary": "#C3141E",
         "secondary": "#FFFFFF"
-      }
-    },
-    {
-      "id": "ZiDoJGiS_3c",
-      "publishedAt": "2026-09-05T18:47:56Z",
-      "matchday": 2,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 64,
-      "cutAt": 60,
-      "home": {
-        "abbr": "S04",
-        "short": "Schalke",
-        "name": "FC Schalke 04",
-        "primary": "#004D9D",
-        "secondary": "#FFFFFF"
-      },
-      "away": {
-        "abbr": "FCB",
-        "short": "Bayern",
-        "name": "FC Bayern München",
-        "primary": "#DC052D",
-        "secondary": "#0066B2"
       }
     }
   ]

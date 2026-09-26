@@ -1,6 +1,6 @@
 {
   "region": "GB",
-  "updatedAt": "2026-09-26T15:26:38.678Z",
+  "updatedAt": "2026-09-26T16:27:40.316Z",
   "matches": [
     {
       "id": "ofUcybZlWBE",
@@ -828,52 +828,6 @@
         "name": "FC Bayern München",
         "primary": "#DC052D",
         "secondary": "#0066B2"
-      }
-    },
-    {
-      "id": "d4k2QNxPL68",
-      "publishedAt": "2026-09-05T15:52:13Z",
-      "matchday": 2,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 66,
-      "cutAt": 62,
-      "home": {
-        "abbr": "BMG",
-        "short": "Gladbach",
-        "name": "Borussia Mönchengladbach",
-        "primary": "#1A1A1A",
-        "secondary": "#00B04F"
-      },
-      "away": {
-        "abbr": "ELV",
-        "short": "Elversberg",
-        "name": "SV Elversberg",
-        "primary": "#000000",
-        "secondary": "#E30613"
-      }
-    },
-    {
-      "id": "_j1pAiHma34",
-      "publishedAt": "2026-09-05T15:37:29Z",
-      "matchday": 2,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 61,
-      "cutAt": 57,
-      "home": {
-        "abbr": "TSG",
-        "short": "Hoffenheim",
-        "name": "TSG Hoffenheim",
-        "primary": "#1C63B7",
-        "secondary": "#FFFFFF"
-      },
-      "away": {
-        "abbr": "BVB",
-        "short": "Dortmund",
-        "name": "Borussia Dortmund",
-        "primary": "#FDE100",
-        "secondary": "#1A1A1A"
       }
     }
   ]

@@ -1,6 +1,6 @@
 {
   "region": "GB",
-  "updatedAt": "2026-09-27T15:26:53.330Z",
+  "updatedAt": "2026-09-27T16:27:55.880Z",
   "matches": [
     {
       "id": "ofUcybZlWBE",
@@ -782,29 +782,6 @@
         "name": "FC Augsburg",
         "primary": "#BA3733",
         "secondary": "#46714D"
-      }
-    },
-    {
-      "id": "GsYw0s10hSo",
-      "publishedAt": "2026-09-06T16:20:08Z",
-      "matchday": 2,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 62,
-      "cutAt": 58,
-      "home": {
-        "abbr": "HSV",
-        "short": "Hamburg",
-        "name": "Hamburger SV",
-        "primary": "#1A1A1A",
-        "secondary": "#0069B4"
-      },
-      "away": {
-        "abbr": "M05",
-        "short": "Mainz",
-        "name": "1. FSV Mainz 05",
-        "primary": "#C3141E",
-        "secondary": "#FFFFFF"
       }
     }
   ]

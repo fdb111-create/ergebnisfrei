@@ -1,6 +1,6 @@
 {
   "region": "GB",
-  "updatedAt": "2026-10-02T22:28:36.983Z",
+  "updatedAt": "2026-10-03T18:21:08.481Z",
   "matches": [
     {
       "id": "ofUcybZlWBE",
@@ -506,29 +506,6 @@
         "name": "SV Werder Bremen",
         "primary": "#1D9053",
         "secondary": "#FFFFFF"
-      }
-    },
-    {
-      "id": "smetF5194UM",
-      "publishedAt": "2026-09-12T16:45:48Z",
-      "matchday": 3,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 181,
-      "cutAt": 177,
-      "home": {
-        "abbr": "FCA",
-        "short": "Augsburg",
-        "name": "FC Augsburg",
-        "primary": "#BA3733",
-        "secondary": "#46714D"
-      },
-      "away": {
-        "abbr": "B04",
-        "short": "Leverkusen",
-        "name": "Bayer 04 Leverkusen",
-        "primary": "#E32221",
-        "secondary": "#1A1A1A"
       }
     }
   ]

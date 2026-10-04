@@ -1,6 +1,6 @@
 {
   "region": "GB",
-  "updatedAt": "2026-10-03T18:21:08.481Z",
+  "updatedAt": "2026-10-04T02:34:59.677Z",
   "matches": [
     {
       "id": "ofUcybZlWBE",
@@ -483,29 +483,6 @@
         "name": "Hamburger SV",
         "primary": "#1A1A1A",
         "secondary": "#0069B4"
-      }
-    },
-    {
-      "id": "oQn9_rYo7tk",
-      "publishedAt": "2026-09-12T18:58:37Z",
-      "matchday": 3,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 60,
-      "cutAt": 56,
-      "home": {
-        "abbr": "KOE",
-        "short": "Köln",
-        "name": "1. FC Köln",
-        "primary": "#ED1C24",
-        "secondary": "#FFFFFF"
-      },
-      "away": {
-        "abbr": "SVW",
-        "short": "Bremen",
-        "name": "SV Werder Bremen",
-        "primary": "#1D9053",
-        "secondary": "#FFFFFF"
       }
     }
   ]

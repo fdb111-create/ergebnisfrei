@@ -1,6 +1,6 @@
 {
   "region": "GB",
-  "updatedAt": "2026-10-04T02:34:59.677Z",
+  "updatedAt": "2026-10-04T18:22:17.669Z",
   "matches": [
     {
       "id": "ofUcybZlWBE",
@@ -460,29 +460,6 @@
         "name": "Borussia Mönchengladbach",
         "primary": "#1A1A1A",
         "secondary": "#00B04F"
-      }
-    },
-    {
-      "id": "P7rz3Smjsqc",
-      "publishedAt": "2026-09-13T15:32:36Z",
-      "matchday": 3,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 64,
-      "cutAt": 60,
-      "home": {
-        "abbr": "RBL",
-        "short": "Leipzig",
-        "name": "RB Leipzig",
-        "primary": "#DD0741",
-        "secondary": "#001F47"
-      },
-      "away": {
-        "abbr": "HSV",
-        "short": "Hamburg",
-        "name": "Hamburger SV",
-        "primary": "#1A1A1A",
-        "secondary": "#0069B4"
       }
     }
   ]

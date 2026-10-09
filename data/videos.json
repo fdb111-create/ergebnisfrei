@@ -1,7 +1,30 @@
 {
   "region": "GB",
-  "updatedAt": "2026-10-09T18:49:23.648Z",
+  "updatedAt": "2026-10-09T23:16:34.702Z",
   "matches": [
+    {
+      "id": "9joESXZVfa8",
+      "publishedAt": "2026-10-09T20:37:15Z",
+      "matchday": 5,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 61,
+      "cutAt": 57,
+      "home": {
+        "abbr": "BVB",
+        "short": "Dortmund",
+        "name": "Borussia Dortmund",
+        "primary": "#FDE100",
+        "secondary": "#1A1A1A"
+      },
+      "away": {
+        "abbr": "SVW",
+        "short": "Bremen",
+        "name": "SV Werder Bremen",
+        "primary": "#1D9053",
+        "secondary": "#FFFFFF"
+      }
+    },
     {
       "id": "ofUcybZlWBE",
       "publishedAt": "2026-09-20T22:00:37Z",
@@ -276,29 +299,6 @@
         "name": "FC Augsburg",
         "primary": "#BA3733",
         "secondary": "#46714D"
-      }
-    },
-    {
-      "id": "YyRS82WiIog",
-      "publishedAt": "2026-09-18T21:06:22Z",
-      "matchday": 4,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 66,
-      "cutAt": 62,
-      "home": {
-        "abbr": "FCB",
-        "short": "Bayern",
-        "name": "FC Bayern München",
-        "primary": "#DC052D",
-        "secondary": "#0066B2"
-      },
-      "away": {
-        "abbr": "FCU",
-        "short": "Union Berlin",
-        "name": "1. FC Union Berlin",
-        "primary": "#EB1923",
-        "secondary": "#FFED02"
       }
     }
   ]

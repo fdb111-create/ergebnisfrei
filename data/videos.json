@@ -1,7 +1,30 @@
 {
   "region": "GB",
-  "updatedAt": "2026-10-09T23:16:34.702Z",
+  "updatedAt": "2026-10-10T17:51:56.692Z",
   "matches": [
+    {
+      "id": "WH5AXCz3UjI",
+      "publishedAt": "2026-10-10T15:51:05Z",
+      "matchday": 5,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 67,
+      "cutAt": 63,
+      "home": {
+        "abbr": "FCA",
+        "short": "Augsburg",
+        "name": "FC Augsburg",
+        "primary": "#BA3733",
+        "secondary": "#46714D"
+      },
+      "away": {
+        "abbr": "FCB",
+        "short": "Bayern",
+        "name": "FC Bayern München",
+        "primary": "#DC052D",
+        "secondary": "#0066B2"
+      }
+    },
     {
       "id": "9joESXZVfa8",
       "publishedAt": "2026-10-09T20:37:15Z",
@@ -276,29 +299,6 @@
         "name": "Borussia Dortmund",
         "primary": "#FDE100",
         "secondary": "#1A1A1A"
-      }
-    },
-    {
-      "id": "IP2yua_ilfQ",
-      "publishedAt": "2026-09-19T16:04:55Z",
-      "matchday": 4,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 60,
-      "cutAt": 56,
-      "home": {
-        "abbr": "SVW",
-        "short": "Bremen",
-        "name": "SV Werder Bremen",
-        "primary": "#1D9053",
-        "secondary": "#FFFFFF"
-      },
-      "away": {
-        "abbr": "FCA",
-        "short": "Augsburg",
-        "name": "FC Augsburg",
-        "primary": "#BA3733",
-        "secondary": "#46714D"
       }
     }
   ]

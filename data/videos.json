@@ -1,7 +1,30 @@
 {
   "region": "GB",
-  "updatedAt": "2026-10-10T17:51:56.692Z",
+  "updatedAt": "2026-10-10T21:45:14.365Z",
   "matches": [
+    {
+      "id": "xJpeuimI8bg",
+      "publishedAt": "2026-10-10T18:29:15Z",
+      "matchday": null,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 61,
+      "cutAt": 57,
+      "home": {
+        "abbr": "RBL",
+        "short": "Leipzig",
+        "name": "RB Leipzig",
+        "primary": "#DD0741",
+        "secondary": "#001F47"
+      },
+      "away": {
+        "abbr": "SGE",
+        "short": "Frankfurt",
+        "name": "Eintracht Frankfurt",
+        "primary": "#E1000F",
+        "secondary": "#1A1A1A"
+      }
+    },
     {
       "id": "WH5AXCz3UjI",
       "publishedAt": "2026-10-10T15:51:05Z",
@@ -276,29 +299,6 @@
         "name": "RB Leipzig",
         "primary": "#DD0741",
         "secondary": "#001F47"
-      }
-    },
-    {
-      "id": "dmE_gTw-Ukc",
-      "publishedAt": "2026-09-19T18:44:29Z",
-      "matchday": 4,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 66,
-      "cutAt": 62,
-      "home": {
-        "abbr": "VfB",
-        "short": "Stuttgart",
-        "name": "VfB Stuttgart",
-        "primary": "#E32219",
-        "secondary": "#FFFFFF"
-      },
-      "away": {
-        "abbr": "BVB",
-        "short": "Dortmund",
-        "name": "Borussia Dortmund",
-        "primary": "#FDE100",
-        "secondary": "#1A1A1A"
       }
     }
   ]

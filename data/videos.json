@@ -1,7 +1,53 @@
 {
   "region": "GB",
-  "updatedAt": "2026-10-11T01:00:35.826Z",
+  "updatedAt": "2026-10-11T18:05:20.658Z",
   "matches": [
+    {
+      "id": "K3vHOfgMeLI",
+      "publishedAt": "2026-10-11T17:49:57Z",
+      "matchday": 5,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 57,
+      "cutAt": 53,
+      "home": {
+        "abbr": "SCF",
+        "short": "Freiburg",
+        "name": "SC Freiburg",
+        "primary": "#E2001A",
+        "secondary": "#1A1A1A"
+      },
+      "away": {
+        "abbr": "S04",
+        "short": "Schalke",
+        "name": "FC Schalke 04",
+        "primary": "#004D9D",
+        "secondary": "#FFFFFF"
+      }
+    },
+    {
+      "id": "lfeWj3FFwgo",
+      "publishedAt": "2026-10-11T16:09:36Z",
+      "matchday": 5,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 68,
+      "cutAt": 64,
+      "home": {
+        "abbr": "KOE",
+        "short": "Köln",
+        "name": "1. FC Köln",
+        "primary": "#ED1C24",
+        "secondary": "#FFFFFF"
+      },
+      "away": {
+        "abbr": "BMG",
+        "short": "Gladbach",
+        "name": "Borussia Mönchengladbach",
+        "primary": "#1A1A1A",
+        "secondary": "#00B04F"
+      }
+    },
     {
       "id": "xJpeuimI8bg",
       "publishedAt": "2026-10-10T18:29:15Z",
@@ -253,52 +299,6 @@
         "name": "SV Elversberg",
         "primary": "#000000",
         "secondary": "#E30613"
-      }
-    },
-    {
-      "id": "3oBANtmWr7M",
-      "publishedAt": "2026-09-20T17:31:15Z",
-      "matchday": 4,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 62,
-      "cutAt": 58,
-      "home": {
-        "abbr": "S04",
-        "short": "Schalke",
-        "name": "FC Schalke 04",
-        "primary": "#004D9D",
-        "secondary": "#FFFFFF"
-      },
-      "away": {
-        "abbr": "ELV",
-        "short": "Elversberg",
-        "name": "SV Elversberg",
-        "primary": "#000000",
-        "secondary": "#E30613"
-      }
-    },
-    {
-      "id": "G0Ax1HeP9EY",
-      "publishedAt": "2026-09-20T15:32:33Z",
-      "matchday": 4,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 61,
-      "cutAt": 57,
-      "home": {
-        "abbr": "B04",
-        "short": "Leverkusen",
-        "name": "Bayer 04 Leverkusen",
-        "primary": "#E32221",
-        "secondary": "#1A1A1A"
-      },
-      "away": {
-        "abbr": "RBL",
-        "short": "Leipzig",
-        "name": "RB Leipzig",
-        "primary": "#DD0741",
-        "secondary": "#001F47"
       }
     }
   ]

@@ -1,7 +1,30 @@
 {
   "region": "GB",
-  "updatedAt": "2026-10-16T17:25:02.473Z",
+  "updatedAt": "2026-10-16T21:09:42.987Z",
   "matches": [
+    {
+      "id": "K25TN86T-NM",
+      "publishedAt": "2026-10-16T20:57:24Z",
+      "matchday": 6,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 64,
+      "cutAt": 60,
+      "home": {
+        "abbr": "SGE",
+        "short": "Frankfurt",
+        "name": "Eintracht Frankfurt",
+        "primary": "#E1000F",
+        "secondary": "#1A1A1A"
+      },
+      "away": {
+        "abbr": "KOE",
+        "short": "Köln",
+        "name": "1. FC Köln",
+        "primary": "#ED1C24",
+        "secondary": "#FFFFFF"
+      }
+    },
     {
       "id": "7iEEjBQDNfE",
       "publishedAt": "2026-10-11T22:00:39Z",

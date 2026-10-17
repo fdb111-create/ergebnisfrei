@@ -1,7 +1,30 @@
 {
   "region": "GB",
-  "updatedAt": "2026-10-16T23:36:24.138Z",
+  "updatedAt": "2026-10-17T16:25:28.950Z",
   "matches": [
+    {
+      "id": "RshxNNkjlRo",
+      "publishedAt": "2026-10-17T15:56:56Z",
+      "matchday": 6,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 67,
+      "cutAt": 63,
+      "home": {
+        "abbr": "ELV",
+        "short": "Elversberg",
+        "name": "SV Elversberg",
+        "primary": "#000000",
+        "secondary": "#E30613"
+      },
+      "away": {
+        "abbr": "FCA",
+        "short": "Augsburg",
+        "name": "FC Augsburg",
+        "primary": "#BA3733",
+        "secondary": "#46714D"
+      }
+    },
     {
       "id": "K25TN86T-NM",
       "publishedAt": "2026-10-16T20:57:24Z",

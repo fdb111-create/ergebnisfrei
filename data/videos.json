@@ -1,7 +1,30 @@
 {
   "region": "GB",
-  "updatedAt": "2026-10-17T16:25:28.950Z",
+  "updatedAt": "2026-10-17T19:24:49.150Z",
   "matches": [
+    {
+      "id": "kNrX978Qpk0",
+      "publishedAt": "2026-10-17T18:45:18Z",
+      "matchday": 6,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 69,
+      "cutAt": 65,
+      "home": {
+        "abbr": "FCB",
+        "short": "Bayern",
+        "name": "FC Bayern München",
+        "primary": "#DC052D",
+        "secondary": "#0066B2"
+      },
+      "away": {
+        "abbr": "RBL",
+        "short": "Leipzig",
+        "name": "RB Leipzig",
+        "primary": "#DD0741",
+        "secondary": "#001F47"
+      }
+    },
     {
       "id": "RshxNNkjlRo",
       "publishedAt": "2026-10-17T15:56:56Z",

@@ -1,7 +1,30 @@
 {
   "region": "GB",
-  "updatedAt": "2026-10-18T00:06:07.751Z",
+  "updatedAt": "2026-10-18T16:33:03.499Z",
   "matches": [
+    {
+      "id": "RJyDJ_bLnBs",
+      "publishedAt": "2026-10-18T16:10:15Z",
+      "matchday": 6,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 63,
+      "cutAt": 59,
+      "home": {
+        "abbr": "B04",
+        "short": "Leverkusen",
+        "name": "Bayer 04 Leverkusen",
+        "primary": "#E32221",
+        "secondary": "#1A1A1A"
+      },
+      "away": {
+        "abbr": "SCF",
+        "short": "Freiburg",
+        "name": "SC Freiburg",
+        "primary": "#E2001A",
+        "secondary": "#1A1A1A"
+      }
+    },
     {
       "id": "kNrX978Qpk0",
       "publishedAt": "2026-10-17T18:45:18Z",

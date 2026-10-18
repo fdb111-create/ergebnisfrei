@@ -1,7 +1,30 @@
 {
   "region": "GB",
-  "updatedAt": "2026-10-18T16:33:03.499Z",
+  "updatedAt": "2026-10-18T19:25:41.214Z",
   "matches": [
+    {
+      "id": "VZWkQH7EmgA",
+      "publishedAt": "2026-10-18T17:34:35Z",
+      "matchday": 6,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 60,
+      "cutAt": 56,
+      "home": {
+        "abbr": "TSG",
+        "short": "Hoffenheim",
+        "name": "TSG Hoffenheim",
+        "primary": "#1C63B7",
+        "secondary": "#FFFFFF"
+      },
+      "away": {
+        "abbr": "BMG",
+        "short": "Gladbach",
+        "name": "Borussia Mönchengladbach",
+        "primary": "#1A1A1A",
+        "secondary": "#00B04F"
+      }
+    },
     {
       "id": "RJyDJ_bLnBs",
       "publishedAt": "2026-10-18T16:10:15Z",

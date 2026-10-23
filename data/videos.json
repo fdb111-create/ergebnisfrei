@@ -1,7 +1,30 @@
 {
   "region": "GB",
-  "updatedAt": "2026-10-23T17:52:45.348Z",
+  "updatedAt": "2026-10-23T21:25:05.434Z",
   "matches": [
+    {
+      "id": "DPwog2DHu0Q",
+      "publishedAt": "2026-10-23T20:39:46Z",
+      "matchday": 7,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 64,
+      "cutAt": 60,
+      "home": {
+        "abbr": "VfB",
+        "short": "Stuttgart",
+        "name": "VfB Stuttgart",
+        "primary": "#E32219",
+        "secondary": "#FFFFFF"
+      },
+      "away": {
+        "abbr": "BMG",
+        "short": "Gladbach",
+        "name": "Borussia Mönchengladbach",
+        "primary": "#1A1A1A",
+        "secondary": "#00B04F"
+      }
+    },
     {
       "id": "GdZlemofc6w",
       "publishedAt": "2026-10-18T22:00:36Z",

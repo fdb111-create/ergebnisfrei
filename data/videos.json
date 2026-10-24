@@ -1,7 +1,30 @@
 {
   "region": "GB",
-  "updatedAt": "2026-10-24T00:43:12.509Z",
+  "updatedAt": "2026-10-24T16:35:36.676Z",
   "matches": [
+    {
+      "id": "SNUnwzOB4EA",
+      "publishedAt": "2026-10-24T15:36:43Z",
+      "matchday": 7,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 61,
+      "cutAt": 57,
+      "home": {
+        "abbr": "M05",
+        "short": "Mainz",
+        "name": "1. FSV Mainz 05",
+        "primary": "#C3141E",
+        "secondary": "#FFFFFF"
+      },
+      "away": {
+        "abbr": "SVW",
+        "short": "Bremen",
+        "name": "SV Werder Bremen",
+        "primary": "#1D9053",
+        "secondary": "#FFFFFF"
+      }
+    },
     {
       "id": "DPwog2DHu0Q",
       "publishedAt": "2026-10-23T20:39:46Z",

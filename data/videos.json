@@ -1,7 +1,30 @@
 {
   "region": "GB",
-  "updatedAt": "2026-10-24T16:35:36.676Z",
+  "updatedAt": "2026-10-24T19:29:39.168Z",
   "matches": [
+    {
+      "id": "vMNzBOLU9ns",
+      "publishedAt": "2026-10-24T18:37:19Z",
+      "matchday": 7,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 68,
+      "cutAt": 64,
+      "home": {
+        "abbr": "BVB",
+        "short": "Dortmund",
+        "name": "Borussia Dortmund",
+        "primary": "#FDE100",
+        "secondary": "#1A1A1A"
+      },
+      "away": {
+        "abbr": "SGE",
+        "short": "Frankfurt",
+        "name": "Eintracht Frankfurt",
+        "primary": "#E1000F",
+        "secondary": "#1A1A1A"
+      }
+    },
     {
       "id": "SNUnwzOB4EA",
       "publishedAt": "2026-10-24T15:36:43Z",

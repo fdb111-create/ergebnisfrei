@@ -1,7 +1,30 @@
 {
   "region": "GB",
-  "updatedAt": "2026-10-24T22:28:58.957Z",
+  "updatedAt": "2026-10-25T17:03:46.257Z",
   "matches": [
+    {
+      "id": "tkfO80xxSYU",
+      "publishedAt": "2026-10-25T16:41:05Z",
+      "matchday": 7,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 66,
+      "cutAt": 62,
+      "home": {
+        "abbr": "TSG",
+        "short": "Hoffenheim",
+        "name": "TSG Hoffenheim",
+        "primary": "#1C63B7",
+        "secondary": "#FFFFFF"
+      },
+      "away": {
+        "abbr": "B04",
+        "short": "Leverkusen",
+        "name": "Bayer 04 Leverkusen",
+        "primary": "#E32221",
+        "secondary": "#1A1A1A"
+      }
+    },
     {
       "id": "vMNzBOLU9ns",
       "publishedAt": "2026-10-24T18:37:19Z",

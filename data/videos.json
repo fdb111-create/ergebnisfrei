@@ -1,7 +1,30 @@
 {
   "region": "GB",
-  "updatedAt": "2026-10-31T17:44:04.170Z",
+  "updatedAt": "2026-10-31T21:36:00.567Z",
   "matches": [
+    {
+      "id": "qK32EAZLRDs",
+      "publishedAt": "2026-10-31T20:19:58Z",
+      "matchday": 8,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 67,
+      "cutAt": 63,
+      "home": {
+        "abbr": "FCB",
+        "short": "Bayern",
+        "name": "FC Bayern München",
+        "primary": "#DC052D",
+        "secondary": "#0066B2"
+      },
+      "away": {
+        "abbr": "BVB",
+        "short": "Dortmund",
+        "name": "Borussia Dortmund",
+        "primary": "#FDE100",
+        "secondary": "#1A1A1A"
+      }
+    },
     {
       "id": "nBdMdjSuXN4",
       "publishedAt": "2026-10-31T16:55:03Z",
@@ -897,29 +920,6 @@
         "name": "Borussia Mönchengladbach",
         "primary": "#1A1A1A",
         "secondary": "#00B04F"
-      }
-    },
-    {
-      "id": "xJpeuimI8bg",
-      "publishedAt": "2026-10-10T18:29:15Z",
-      "matchday": null,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 61,
-      "cutAt": 57,
-      "home": {
-        "abbr": "RBL",
-        "short": "Leipzig",
-        "name": "RB Leipzig",
-        "primary": "#DD0741",
-        "secondary": "#001F47"
-      },
-      "away": {
-        "abbr": "SGE",
-        "short": "Frankfurt",
-        "name": "Eintracht Frankfurt",
-        "primary": "#E1000F",
-        "secondary": "#1A1A1A"
       }
     }
   ]

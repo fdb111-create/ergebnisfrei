@@ -1,7 +1,30 @@
 {
   "region": "GB",
-  "updatedAt": "2026-10-30T22:58:40.985Z",
+  "updatedAt": "2026-10-31T17:44:04.170Z",
   "matches": [
+    {
+      "id": "nBdMdjSuXN4",
+      "publishedAt": "2026-10-31T16:55:03Z",
+      "matchday": 8,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 62,
+      "cutAt": 58,
+      "home": {
+        "abbr": "B04",
+        "short": "Leverkusen",
+        "name": "Bayer 04 Leverkusen",
+        "primary": "#E32221",
+        "secondary": "#1A1A1A"
+      },
+      "away": {
+        "abbr": "VfB",
+        "short": "Stuttgart",
+        "name": "VfB Stuttgart",
+        "primary": "#E32219",
+        "secondary": "#FFFFFF"
+      }
+    },
     {
       "id": "Hb1Cng1Cd1s",
       "publishedAt": "2026-10-30T21:52:51Z",
@@ -897,29 +920,6 @@
         "name": "Eintracht Frankfurt",
         "primary": "#E1000F",
         "secondary": "#1A1A1A"
-      }
-    },
-    {
-      "id": "WH5AXCz3UjI",
-      "publishedAt": "2026-10-10T15:51:05Z",
-      "matchday": 5,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 67,
-      "cutAt": 63,
-      "home": {
-        "abbr": "FCA",
-        "short": "Augsburg",
-        "name": "FC Augsburg",
-        "primary": "#BA3733",
-        "secondary": "#46714D"
-      },
-      "away": {
-        "abbr": "FCB",
-        "short": "Bayern",
-        "name": "FC Bayern München",
-        "primary": "#DC052D",
-        "secondary": "#0066B2"
       }
     }
   ]

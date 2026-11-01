@@ -1,7 +1,30 @@
 {
   "region": "GB",
-  "updatedAt": "2026-11-01T01:10:50.334Z",
+  "updatedAt": "2026-11-01T18:26:04.154Z",
   "matches": [
+    {
+      "id": "DcroliP3JRw",
+      "publishedAt": "2026-11-01T16:31:01Z",
+      "matchday": 8,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 62,
+      "cutAt": 58,
+      "home": {
+        "abbr": "FCU",
+        "short": "Union Berlin",
+        "name": "1. FC Union Berlin",
+        "primary": "#EB1923",
+        "secondary": "#FFED02"
+      },
+      "away": {
+        "abbr": "KOE",
+        "short": "Köln",
+        "name": "1. FC Köln",
+        "primary": "#ED1C24",
+        "secondary": "#FFFFFF"
+      }
+    },
     {
       "id": "zm9kftTvCOQ",
       "publishedAt": "2026-10-31T21:50:20Z",
@@ -897,52 +920,6 @@
         "name": "SV Werder Bremen",
         "primary": "#1D9053",
         "secondary": "#FFFFFF"
-      }
-    },
-    {
-      "id": "K3vHOfgMeLI",
-      "publishedAt": "2026-10-11T17:49:57Z",
-      "matchday": 5,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 57,
-      "cutAt": 53,
-      "home": {
-        "abbr": "SCF",
-        "short": "Freiburg",
-        "name": "SC Freiburg",
-        "primary": "#E2001A",
-        "secondary": "#1A1A1A"
-      },
-      "away": {
-        "abbr": "S04",
-        "short": "Schalke",
-        "name": "FC Schalke 04",
-        "primary": "#004D9D",
-        "secondary": "#FFFFFF"
-      }
-    },
-    {
-      "id": "lfeWj3FFwgo",
-      "publishedAt": "2026-10-11T16:09:36Z",
-      "matchday": 5,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 68,
-      "cutAt": 64,
-      "home": {
-        "abbr": "KOE",
-        "short": "Köln",
-        "name": "1. FC Köln",
-        "primary": "#ED1C24",
-        "secondary": "#FFFFFF"
-      },
-      "away": {
-        "abbr": "BMG",
-        "short": "Gladbach",
-        "name": "Borussia Mönchengladbach",
-        "primary": "#1A1A1A",
-        "secondary": "#00B04F"
       }
     }
   ]

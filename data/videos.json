@@ -1,7 +1,191 @@
 {
   "region": "GB",
-  "updatedAt": "2026-11-01T22:49:50.462Z",
+  "updatedAt": "2026-11-02T22:19:42.007Z",
   "matches": [
+    {
+      "id": "YSToP57dISM",
+      "publishedAt": "2026-11-02T13:00:40Z",
+      "matchday": 8,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 279,
+      "cutAt": 275,
+      "home": {
+        "abbr": "FCB",
+        "short": "Bayern",
+        "name": "FC Bayern München",
+        "primary": "#DC052D",
+        "secondary": "#0066B2"
+      },
+      "away": {
+        "abbr": "BVB",
+        "short": "Dortmund",
+        "name": "Borussia Dortmund",
+        "primary": "#FDE100",
+        "secondary": "#1A1A1A"
+      }
+    },
+    {
+      "id": "X7cfE6kMmYc",
+      "publishedAt": "2026-11-01T23:00:38Z",
+      "matchday": 8,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 250,
+      "cutAt": 246,
+      "home": {
+        "abbr": "VfB",
+        "short": "Stuttgart",
+        "name": "VfB Stuttgart",
+        "primary": "#E32219",
+        "secondary": "#FFFFFF"
+      },
+      "away": {
+        "abbr": "B04",
+        "short": "Leverkusen",
+        "name": "Bayer 04 Leverkusen",
+        "primary": "#E32221",
+        "secondary": "#1A1A1A"
+      }
+    },
+    {
+      "id": "lqTQEfxoYno",
+      "publishedAt": "2026-11-01T23:00:32Z",
+      "matchday": 8,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 179,
+      "cutAt": 175,
+      "home": {
+        "abbr": "S04",
+        "short": "Schalke",
+        "name": "FC Schalke 04",
+        "primary": "#004D9D",
+        "secondary": "#FFFFFF"
+      },
+      "away": {
+        "abbr": "RBL",
+        "short": "Leipzig",
+        "name": "RB Leipzig",
+        "primary": "#DD0741",
+        "secondary": "#001F47"
+      }
+    },
+    {
+      "id": "5b8exJOW5Sk",
+      "publishedAt": "2026-11-01T23:00:15Z",
+      "matchday": 8,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 183,
+      "cutAt": 179,
+      "home": {
+        "abbr": "SVW",
+        "short": "Bremen",
+        "name": "SV Werder Bremen",
+        "primary": "#1D9053",
+        "secondary": "#FFFFFF"
+      },
+      "away": {
+        "abbr": "TSG",
+        "short": "Hoffenheim",
+        "name": "TSG Hoffenheim",
+        "primary": "#1C63B7",
+        "secondary": "#FFFFFF"
+      }
+    },
+    {
+      "id": "CtiveS-84LE",
+      "publishedAt": "2026-11-01T23:00:13Z",
+      "matchday": 8,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 182,
+      "cutAt": 178,
+      "home": {
+        "abbr": "BMG",
+        "short": "Gladbach",
+        "name": "Borussia Mönchengladbach",
+        "primary": "#1A1A1A",
+        "secondary": "#00B04F"
+      },
+      "away": {
+        "abbr": "PAD",
+        "short": "Paderborn",
+        "name": "SC Paderborn 07",
+        "primary": "#004E9E",
+        "secondary": "#009EE0"
+      }
+    },
+    {
+      "id": "sjpjQmQyEYw",
+      "publishedAt": "2026-11-01T23:00:07Z",
+      "matchday": 8,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 238,
+      "cutAt": 234,
+      "home": {
+        "abbr": "FCB",
+        "short": "Bayern",
+        "name": "FC Bayern München",
+        "primary": "#DC052D",
+        "secondary": "#0066B2"
+      },
+      "away": {
+        "abbr": "BVB",
+        "short": "Dortmund",
+        "name": "Borussia Dortmund",
+        "primary": "#FDE100",
+        "secondary": "#1A1A1A"
+      }
+    },
+    {
+      "id": "mNL39XEVv8A",
+      "publishedAt": "2026-11-01T23:00:03Z",
+      "matchday": 8,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 239,
+      "cutAt": 235,
+      "home": {
+        "abbr": "SGE",
+        "short": "Frankfurt",
+        "name": "Eintracht Frankfurt",
+        "primary": "#E1000F",
+        "secondary": "#1A1A1A"
+      },
+      "away": {
+        "abbr": "HSV",
+        "short": "Hamburg",
+        "name": "Hamburger SV",
+        "primary": "#1A1A1A",
+        "secondary": "#0069B4"
+      }
+    },
+    {
+      "id": "7E3j-eF_qxI",
+      "publishedAt": "2026-11-01T23:00:02Z",
+      "matchday": 8,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 179,
+      "cutAt": 175,
+      "home": {
+        "abbr": "FCA",
+        "short": "Augsburg",
+        "name": "FC Augsburg",
+        "primary": "#BA3733",
+        "secondary": "#46714D"
+      },
+      "away": {
+        "abbr": "SCF",
+        "short": "Freiburg",
+        "name": "SC Freiburg",
+        "primary": "#E2001A",
+        "secondary": "#1A1A1A"
+      }
+    },
     {
       "id": "6EqGSKRHVgE",
       "publishedAt": "2026-11-01T18:42:58Z",

@@ -1,7 +1,53 @@
 {
   "region": "GB",
-  "updatedAt": "2026-11-07T00:06:47.725Z",
+  "updatedAt": "2026-11-07T18:02:58.057Z",
   "matches": [
+    {
+      "id": "7trwWayUYFY",
+      "publishedAt": "2026-11-07T17:03:35Z",
+      "matchday": 9,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 67,
+      "cutAt": 63,
+      "home": {
+        "abbr": "M05",
+        "short": "Mainz",
+        "name": "1. FSV Mainz 05",
+        "primary": "#C3141E",
+        "secondary": "#FFFFFF"
+      },
+      "away": {
+        "abbr": "FCB",
+        "short": "Bayern",
+        "name": "FC Bayern München",
+        "primary": "#DC052D",
+        "secondary": "#0066B2"
+      }
+    },
+    {
+      "id": "TwytovTfDWM",
+      "publishedAt": "2026-11-07T14:38:12Z",
+      "matchday": 9,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 63,
+      "cutAt": 59,
+      "home": {
+        "abbr": "HSV",
+        "short": "Hamburg",
+        "name": "Hamburger SV",
+        "primary": "#1A1A1A",
+        "secondary": "#0069B4"
+      },
+      "away": {
+        "abbr": "BMG",
+        "short": "Gladbach",
+        "name": "Borussia Mönchengladbach",
+        "primary": "#1A1A1A",
+        "secondary": "#00B04F"
+      }
+    },
     {
       "id": "YSToP57dISM",
       "publishedAt": "2026-11-02T13:00:40Z",
@@ -897,29 +943,6 @@
         "name": "RB Leipzig",
         "primary": "#DD0741",
         "secondary": "#001F47"
-      }
-    },
-    {
-      "id": "RshxNNkjlRo",
-      "publishedAt": "2026-10-17T15:56:56Z",
-      "matchday": 6,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 67,
-      "cutAt": 63,
-      "home": {
-        "abbr": "ELV",
-        "short": "Elversberg",
-        "name": "SV Elversberg",
-        "primary": "#000000",
-        "secondary": "#E30613"
-      },
-      "away": {
-        "abbr": "FCA",
-        "short": "Augsburg",
-        "name": "FC Augsburg",
-        "primary": "#BA3733",
-        "secondary": "#46714D"
       }
     }
   ]

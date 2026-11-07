@@ -1,6 +1,6 @@
 {
   "region": "GB",
-  "updatedAt": "2026-11-06T19:57:17.571Z",
+  "updatedAt": "2026-11-07T00:06:47.725Z",
   "matches": [
     {
       "id": "YSToP57dISM",
@@ -920,29 +920,6 @@
         "name": "FC Augsburg",
         "primary": "#BA3733",
         "secondary": "#46714D"
-      }
-    },
-    {
-      "id": "K25TN86T-NM",
-      "publishedAt": "2026-10-16T20:57:24Z",
-      "matchday": 6,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 64,
-      "cutAt": 60,
-      "home": {
-        "abbr": "SGE",
-        "short": "Frankfurt",
-        "name": "Eintracht Frankfurt",
-        "primary": "#E1000F",
-        "secondary": "#1A1A1A"
-      },
-      "away": {
-        "abbr": "KOE",
-        "short": "Köln",
-        "name": "1. FC Köln",
-        "primary": "#ED1C24",
-        "secondary": "#FFFFFF"
       }
     }
   ]

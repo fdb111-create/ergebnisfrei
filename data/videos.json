@@ -1,7 +1,30 @@
 {
   "region": "GB",
-  "updatedAt": "2026-11-08T01:26:43.193Z",
+  "updatedAt": "2026-11-08T18:21:48.480Z",
   "matches": [
+    {
+      "id": "6DEh00JjkmE",
+      "publishedAt": "2026-11-08T16:32:43Z",
+      "matchday": 9,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 64,
+      "cutAt": 60,
+      "home": {
+        "abbr": "KOE",
+        "short": "Köln",
+        "name": "1. FC Köln",
+        "primary": "#ED1C24",
+        "secondary": "#FFFFFF"
+      },
+      "away": {
+        "abbr": "B04",
+        "short": "Leverkusen",
+        "name": "Bayer 04 Leverkusen",
+        "primary": "#E32221",
+        "secondary": "#1A1A1A"
+      }
+    },
     {
       "id": "v5O3VC_qFWA",
       "publishedAt": "2026-11-07T19:32:01Z",
@@ -897,52 +920,6 @@
         "name": "1. FSV Mainz 05",
         "primary": "#C3141E",
         "secondary": "#FFFFFF"
-      }
-    },
-    {
-      "id": "VZWkQH7EmgA",
-      "publishedAt": "2026-10-18T17:34:35Z",
-      "matchday": 6,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 60,
-      "cutAt": 56,
-      "home": {
-        "abbr": "TSG",
-        "short": "Hoffenheim",
-        "name": "TSG Hoffenheim",
-        "primary": "#1C63B7",
-        "secondary": "#FFFFFF"
-      },
-      "away": {
-        "abbr": "BMG",
-        "short": "Gladbach",
-        "name": "Borussia Mönchengladbach",
-        "primary": "#1A1A1A",
-        "secondary": "#00B04F"
-      }
-    },
-    {
-      "id": "RJyDJ_bLnBs",
-      "publishedAt": "2026-10-18T16:10:15Z",
-      "matchday": 6,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 63,
-      "cutAt": 59,
-      "home": {
-        "abbr": "B04",
-        "short": "Leverkusen",
-        "name": "Bayer 04 Leverkusen",
-        "primary": "#E32221",
-        "secondary": "#1A1A1A"
-      },
-      "away": {
-        "abbr": "SCF",
-        "short": "Freiburg",
-        "name": "SC Freiburg",
-        "primary": "#E2001A",
-        "secondary": "#1A1A1A"
       }
     }
   ]

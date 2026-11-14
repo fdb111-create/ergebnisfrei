@@ -1,6 +1,6 @@
 {
   "region": "GB",
-  "updatedAt": "2026-11-13T20:29:24.984Z",
+  "updatedAt": "2026-11-14T01:27:22.519Z",
   "matches": [
     {
       "id": "ecqOQWXUHT4",
@@ -897,29 +897,6 @@
         "name": "SV Werder Bremen",
         "primary": "#1D9053",
         "secondary": "#FFFFFF"
-      }
-    },
-    {
-      "id": "DPwog2DHu0Q",
-      "publishedAt": "2026-10-23T20:39:46Z",
-      "matchday": 7,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 64,
-      "cutAt": 60,
-      "home": {
-        "abbr": "VfB",
-        "short": "Stuttgart",
-        "name": "VfB Stuttgart",
-        "primary": "#E32219",
-        "secondary": "#FFFFFF"
-      },
-      "away": {
-        "abbr": "BMG",
-        "short": "Gladbach",
-        "name": "Borussia Mönchengladbach",
-        "primary": "#1A1A1A",
-        "secondary": "#00B04F"
       }
     }
   ]

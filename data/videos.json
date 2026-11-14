@@ -1,6 +1,6 @@
 {
   "region": "GB",
-  "updatedAt": "2026-11-14T01:27:22.519Z",
+  "updatedAt": "2026-11-14T18:44:15.880Z",
   "matches": [
     {
       "id": "ecqOQWXUHT4",
@@ -828,75 +828,6 @@
         "name": "Bayer 04 Leverkusen",
         "primary": "#E32221",
         "secondary": "#1A1A1A"
-      }
-    },
-    {
-      "id": "vMNzBOLU9ns",
-      "publishedAt": "2026-10-24T18:37:19Z",
-      "matchday": 7,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 68,
-      "cutAt": 64,
-      "home": {
-        "abbr": "BVB",
-        "short": "Dortmund",
-        "name": "Borussia Dortmund",
-        "primary": "#FDE100",
-        "secondary": "#1A1A1A"
-      },
-      "away": {
-        "abbr": "SGE",
-        "short": "Frankfurt",
-        "name": "Eintracht Frankfurt",
-        "primary": "#E1000F",
-        "secondary": "#1A1A1A"
-      }
-    },
-    {
-      "id": "rrCHaMYsG8M",
-      "publishedAt": "2026-10-24T16:26:57Z",
-      "matchday": 7,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 182,
-      "cutAt": 178,
-      "home": {
-        "abbr": "RBL",
-        "short": "Leipzig",
-        "name": "RB Leipzig",
-        "primary": "#DD0741",
-        "secondary": "#001F47"
-      },
-      "away": {
-        "abbr": "ELV",
-        "short": "Elversberg",
-        "name": "SV Elversberg",
-        "primary": "#000000",
-        "secondary": "#E30613"
-      }
-    },
-    {
-      "id": "SNUnwzOB4EA",
-      "publishedAt": "2026-10-24T15:36:43Z",
-      "matchday": 7,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 61,
-      "cutAt": 57,
-      "home": {
-        "abbr": "M05",
-        "short": "Mainz",
-        "name": "1. FSV Mainz 05",
-        "primary": "#C3141E",
-        "secondary": "#FFFFFF"
-      },
-      "away": {
-        "abbr": "SVW",
-        "short": "Bremen",
-        "name": "SV Werder Bremen",
-        "primary": "#1D9053",
-        "secondary": "#FFFFFF"
       }
     }
   ]

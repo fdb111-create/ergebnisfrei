@@ -1,6 +1,6 @@
 {
   "region": "GB",
-  "updatedAt": "2026-11-14T22:58:56.065Z",
+  "updatedAt": "2026-11-15T19:22:38.606Z",
   "matches": [
     {
       "id": "ecqOQWXUHT4",
@@ -769,52 +769,6 @@
       "hasScore": false,
       "duration": 241,
       "cutAt": 237,
-      "home": {
-        "abbr": "TSG",
-        "short": "Hoffenheim",
-        "name": "TSG Hoffenheim",
-        "primary": "#1C63B7",
-        "secondary": "#FFFFFF"
-      },
-      "away": {
-        "abbr": "B04",
-        "short": "Leverkusen",
-        "name": "Bayer 04 Leverkusen",
-        "primary": "#E32221",
-        "secondary": "#1A1A1A"
-      }
-    },
-    {
-      "id": "M5aYzSvorSE",
-      "publishedAt": "2026-10-25T18:49:37Z",
-      "matchday": 7,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 69,
-      "cutAt": 65,
-      "home": {
-        "abbr": "SCF",
-        "short": "Freiburg",
-        "name": "SC Freiburg",
-        "primary": "#E2001A",
-        "secondary": "#1A1A1A"
-      },
-      "away": {
-        "abbr": "FCB",
-        "short": "Bayern",
-        "name": "FC Bayern München",
-        "primary": "#DC052D",
-        "secondary": "#0066B2"
-      }
-    },
-    {
-      "id": "tkfO80xxSYU",
-      "publishedAt": "2026-10-25T16:41:05Z",
-      "matchday": 7,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 66,
-      "cutAt": 62,
       "home": {
         "abbr": "TSG",
         "short": "Hoffenheim",

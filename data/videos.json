@@ -1,7 +1,30 @@
 {
   "region": "GB",
-  "updatedAt": "2026-11-20T21:05:21.224Z",
+  "updatedAt": "2026-11-21T02:16:00.083Z",
   "matches": [
+    {
+      "id": "uBw8eTgql9I",
+      "publishedAt": "2026-11-20T21:40:52Z",
+      "matchday": 10,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 65,
+      "cutAt": 61,
+      "home": {
+        "abbr": "FCB",
+        "short": "Bayern",
+        "name": "FC Bayern München",
+        "primary": "#DC052D",
+        "secondary": "#0066B2"
+      },
+      "away": {
+        "abbr": "KOE",
+        "short": "Köln",
+        "name": "1. FC Köln",
+        "primary": "#ED1C24",
+        "secondary": "#FFFFFF"
+      }
+    },
     {
       "id": "ecqOQWXUHT4",
       "publishedAt": "2026-11-08T23:00:36Z",
@@ -574,29 +597,6 @@
         "short": "Stuttgart",
         "name": "VfB Stuttgart",
         "primary": "#E32219",
-        "secondary": "#FFFFFF"
-      }
-    },
-    {
-      "id": "Hb1Cng1Cd1s",
-      "publishedAt": "2026-10-30T21:52:51Z",
-      "matchday": 8,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 65,
-      "cutAt": 61,
-      "home": {
-        "abbr": "ELV",
-        "short": "Elversberg",
-        "name": "SV Elversberg",
-        "primary": "#000000",
-        "secondary": "#E30613"
-      },
-      "away": {
-        "abbr": "M05",
-        "short": "Mainz",
-        "name": "1. FSV Mainz 05",
-        "primary": "#C3141E",
         "secondary": "#FFFFFF"
       }
     }

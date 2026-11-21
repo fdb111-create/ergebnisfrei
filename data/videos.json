@@ -1,7 +1,53 @@
 {
   "region": "GB",
-  "updatedAt": "2026-11-21T02:16:00.083Z",
+  "updatedAt": "2026-11-21T20:06:12.562Z",
   "matches": [
+    {
+      "id": "OH2RDPHmdBA",
+      "publishedAt": "2026-11-21T19:53:45Z",
+      "matchday": 10,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 62,
+      "cutAt": 58,
+      "home": {
+        "abbr": "S04",
+        "short": "Schalke",
+        "name": "FC Schalke 04",
+        "primary": "#004D9D",
+        "secondary": "#FFFFFF"
+      },
+      "away": {
+        "abbr": "VfB",
+        "short": "Stuttgart",
+        "name": "VfB Stuttgart",
+        "primary": "#E32219",
+        "secondary": "#FFFFFF"
+      }
+    },
+    {
+      "id": "I9zCBwd5ywU",
+      "publishedAt": "2026-11-21T16:38:48Z",
+      "matchday": 10,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 59,
+      "cutAt": 55,
+      "home": {
+        "abbr": "BMG",
+        "short": "Gladbach",
+        "name": "Borussia Mönchengladbach",
+        "primary": "#1A1A1A",
+        "secondary": "#00B04F"
+      },
+      "away": {
+        "abbr": "BVB",
+        "short": "Dortmund",
+        "name": "Borussia Dortmund",
+        "primary": "#FDE100",
+        "secondary": "#1A1A1A"
+      }
+    },
     {
       "id": "uBw8eTgql9I",
       "publishedAt": "2026-11-20T21:40:52Z",
@@ -575,29 +621,6 @@
         "name": "Borussia Dortmund",
         "primary": "#FDE100",
         "secondary": "#1A1A1A"
-      }
-    },
-    {
-      "id": "nBdMdjSuXN4",
-      "publishedAt": "2026-10-31T16:55:03Z",
-      "matchday": 8,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 62,
-      "cutAt": 58,
-      "home": {
-        "abbr": "B04",
-        "short": "Leverkusen",
-        "name": "Bayer 04 Leverkusen",
-        "primary": "#E32221",
-        "secondary": "#1A1A1A"
-      },
-      "away": {
-        "abbr": "VfB",
-        "short": "Stuttgart",
-        "name": "VfB Stuttgart",
-        "primary": "#E32219",
-        "secondary": "#FFFFFF"
       }
     }
   ]

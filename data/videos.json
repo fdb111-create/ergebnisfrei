@@ -1,7 +1,53 @@
 {
   "region": "GB",
-  "updatedAt": "2026-11-22T00:20:50.420Z",
+  "updatedAt": "2026-11-22T20:21:37.438Z",
   "matches": [
+    {
+      "id": "AjoE-9Br7bk",
+      "publishedAt": "2026-11-22T18:39:40Z",
+      "matchday": 10,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 60,
+      "cutAt": 56,
+      "home": {
+        "abbr": "SVW",
+        "short": "Bremen",
+        "name": "SV Werder Bremen",
+        "primary": "#1D9053",
+        "secondary": "#FFFFFF"
+      },
+      "away": {
+        "abbr": "HSV",
+        "short": "Hamburg",
+        "name": "Hamburger SV",
+        "primary": "#1A1A1A",
+        "secondary": "#0069B4"
+      }
+    },
+    {
+      "id": "peRutfZlJmU",
+      "publishedAt": "2026-11-22T16:46:22Z",
+      "matchday": 10,
+      "secondTier": false,
+      "hasScore": false,
+      "duration": 60,
+      "cutAt": 56,
+      "home": {
+        "abbr": "FCA",
+        "short": "Augsburg",
+        "name": "FC Augsburg",
+        "primary": "#BA3733",
+        "secondary": "#46714D"
+      },
+      "away": {
+        "abbr": "M05",
+        "short": "Mainz",
+        "name": "1. FSV Mainz 05",
+        "primary": "#C3141E",
+        "secondary": "#FFFFFF"
+      }
+    },
     {
       "id": "OH2RDPHmdBA",
       "publishedAt": "2026-11-21T19:53:45Z",
@@ -529,52 +575,6 @@
         "name": "SC Freiburg",
         "primary": "#E2001A",
         "secondary": "#1A1A1A"
-      }
-    },
-    {
-      "id": "6EqGSKRHVgE",
-      "publishedAt": "2026-11-01T18:42:58Z",
-      "matchday": 8,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 61,
-      "cutAt": 57,
-      "home": {
-        "abbr": "SGE",
-        "short": "Frankfurt",
-        "name": "Eintracht Frankfurt",
-        "primary": "#E1000F",
-        "secondary": "#1A1A1A"
-      },
-      "away": {
-        "abbr": "HSV",
-        "short": "Hamburg",
-        "name": "Hamburger SV",
-        "primary": "#1A1A1A",
-        "secondary": "#0069B4"
-      }
-    },
-    {
-      "id": "DcroliP3JRw",
-      "publishedAt": "2026-11-01T16:31:01Z",
-      "matchday": 8,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 62,
-      "cutAt": 58,
-      "home": {
-        "abbr": "FCU",
-        "short": "Union Berlin",
-        "name": "1. FC Union Berlin",
-        "primary": "#EB1923",
-        "secondary": "#FFED02"
-      },
-      "away": {
-        "abbr": "KOE",
-        "short": "Köln",
-        "name": "1. FC Köln",
-        "primary": "#ED1C24",
-        "secondary": "#FFFFFF"
       }
     }
   ]

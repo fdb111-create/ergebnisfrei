@@ -1,6 +1,6 @@
 {
   "region": "GB",
-  "updatedAt": "2026-11-23T01:44:28.639Z",
+  "updatedAt": "2026-11-24T00:51:22.835Z",
   "matches": [
     {
       "id": "SlfD9fhbfK0",
@@ -598,29 +598,6 @@
         "name": "Borussia Mönchengladbach",
         "primary": "#1A1A1A",
         "secondary": "#00B04F"
-      }
-    },
-    {
-      "id": "YSToP57dISM",
-      "publishedAt": "2026-11-02T13:00:40Z",
-      "matchday": 8,
-      "secondTier": false,
-      "hasScore": false,
-      "duration": 279,
-      "cutAt": 275,
-      "home": {
-        "abbr": "FCB",
-        "short": "Bayern",
-        "name": "FC Bayern München",
-        "primary": "#DC052D",
-        "secondary": "#0066B2"
-      },
-      "away": {
-        "abbr": "BVB",
-        "short": "Dortmund",
-        "name": "Borussia Dortmund",
-        "primary": "#FDE100",
-        "secondary": "#1A1A1A"
       }
     }
   ]
